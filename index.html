@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="shortcut icon" href="icon.jpg" type="image/x-icon" />
+    <meta name="shortcut icon" href="http://img.duoziwang.com/2019/01/07021556110686.jpg" type="image/x-icon" />
     <title>我的网站</title>
     <style>
         * {
@@ -52,6 +52,7 @@
             background-color: rgba(0, 0, 0, 0.411);
             color: white;
             overflow: hidden;
+            z-index: 999;
         }
         
         .tab ul li {
@@ -86,6 +87,44 @@
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.6);
         }
+        
+        .tab2 {
+            background-color: rgba(255, 255, 255, 0.6);
+            width: 100%;
+            margin-top: -30px;
+        }
+        
+        .tab2 h3 {
+            margin: 10px;
+            line-height: 50px;
+        }
+        
+        .tab3 {
+            background-color: rgba(255, 255, 255, 0.6);
+            width: 100%;
+            margin-top: 30px;
+        }
+        
+        .tab4 {
+            background-color: rgba(255, 255, 255, 0.6);
+            width: 100%;
+            margin-top: 30px;
+        }
+        
+        .tab3 h3 {
+            margin: 10px;
+            line-height: 50px;
+        }
+        
+        .tab4 .yy {
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .tab4 .yy h3 {
+            margin: 10px;
+            line-height: 50px;
+        }
     </style>
 </head>
 
@@ -101,7 +140,7 @@
                     <li>简介</li>
                 </a>
                 <a href="#tab3">
-                    <li>擅长</li>
+                    <li>历史</li>
                 </a>
                 <a href="#tab4">
                     <li>推荐</li>
@@ -113,7 +152,7 @@
         </div>
         <a name="tab1">
             <div class="tab1">
-                <img src="icon.jpg" />
+                <img src="http://img.duoziwang.com/2019/01/07021556110686.jpg" />
                 <div class="jj">
                     <br><br>
                     <h1>我是陈思全</h1><br>
@@ -122,20 +161,33 @@
             </div>
         </a>
         <a name="tab2">
-            <div class="tab2">2</div>
+            <div class="tab2">
+                <h1>简介</h1>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;我是一名热爱开发的初中生，我今年13岁了，上初一。 我学习的编程语言是HTML，这是我认为最方便开发的编程语言了，有一个浏览器和记事本就行。 我在其他方面也有所涉及，但学艺不精。 我成绩算好，但父母认为并不好😔我就读于全南县第四小学，家庭条件不算差，但父母要求比较严格-可能是我比较懒吧- 我的学习成绩不错，能排个年级前三 我喜欢下象棋，五子棋，玩魔方目前魔方可以玩到45s以内。 我有着重度拖延证，还有点粗心-在以前比较粗心，现在还好一点-
+                    我比较讨厌别人拿走我的东西，包括我的时间、权力、地位、爱好等，和别人打扰我做我喜欢的事情。 我喜欢家长布置额外的作业，-懂得都懂-
+
+                </h3>
+            </div>
         </a>
         <a name="tab3">
-            <div class="tab3">3</div>
+            <div class="tab3">
+                <h1>我的未来与过去</h1>
+                <h3>我过去比较聪明，成绩比较好，也不怎么玩游戏，就是不会做家务，有点懒 我最近两年开始学编程，学的是Android，因为我用的是手机，Aide，后来我妈收了我的手机。。。 我最近一年开始接触HTML，一开始还是以Android为主，HTML只会初级的标签和css 后来，随着电脑的应用，我开始深入学习HTML，技术有很多的提升 现在我已经是个中级HTML开发者了，会熟练的制作页面 未来，我会向H5App发展，HTML继续学习Bootstrap和JQuery等插件的使用
+
+                </h3>
+            </div>
         </a>
-        <a name="tab4">4
+        <a name="tab4">
+
             <div class="tab4">
+                <h1 style="padding: 10px;">推荐</h1>
                 <div class="yy">
-                    <p></p>
-                    <p></p>
+                    <h1>如果你想要学HTML，强烈推荐runoob.com</h1>
+                    <h3>菜鸟教程(www.runoob.com)提供了编程的基础技术教程, 介绍了HTML、CSS、Javascript、Python,Java,Ruby,C,PHP , MySQL等各种编程语言的基础知识。 同时本站中也提供在线运行</h3>
                 </div>
                 <div class="yy">
-                    <p></p>
-                    <p></p>
+                    <h1>HTML编辑器，用VSCode</h1>
+                    <h3>Visual Studio Code（简称“VS Code” ）是Microsoft在2015年4月30日Build开发者大会上正式宣布一个运行于 Mac OS X、Windows和 Linux 之上的，针对于编写现代Web和云应用的跨平台源代码编辑器， 可在桌面上运行，并且可用于Windows，macOS和Linux。它具有对JavaScript，TypeScript和Node.js的内置支持，并具有丰富的其他语言（例如C++，C＃，Java，Python，PHP，Go）和运行时（例如.NET和Unity）扩展的生态系统。</h3>
                 </div>
                 <div class="yy">
                     <p></p>
@@ -144,7 +196,7 @@
             </div>
         </a>
         <a name="tab5">5
-            <div class="tab5">
+            <div class="tab5" style="padding-bottom:1000px;">
                 <div class="yy">
                     <p></p>
                     <p></p>
