@@ -20,12 +20,13 @@
             margin: -1px 0px 0px -1px;
             object-fit: cover;
             padding: 0px;
-            position: absolute;
+            position: fixed;
             width: 101%;
             left: 0;
             top: 0;
             width: 100%;
             z-index: -10;
+            pointer-events: none;
         }
         
         li {
@@ -38,10 +39,15 @@
             padding: 10px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
         }
         
         .tab {
-            width: 100%;
+            position: fixed;
+            top: 0;
+            left: auto;
+            right: auto;
+            width: 890px;
             background-color: rgba(0, 0, 0, 0.411);
             color: white;
             overflow: hidden;
@@ -53,10 +59,31 @@
             text-align: center;
             font-size: 23px;
             margin: 0.5%;
+            cursor: pointer;
+            color: white;
         }
         
         .tab ul li:hover {
             color: rgb(211, 207, 207);
+        }
+        
+        .tab1 {
+            margin-top: 100px;
+        }
+        
+        .tab1 img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: rgba(255, 255, 255, 0.6) solid 10px;
+        }
+        
+        .tab1 .jj {
+            position: relative;
+            top: -50px;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.6);
         }
     </style>
 </head>
@@ -66,30 +93,74 @@
     <div class="more">
         <div class="tab">
             <ul>
-                <li>我</li>
-                <li>简介</li>
-                <li>擅长</li>
-                <li>推荐</li>
-                <li>项目</li>
+                <a href="#tab1">
+                    <li>我</li>
+                </a>
+                <a href="#tab2">
+                    <li>简介</li>
+                </a>
+                <a href="#tab3">
+                    <li>擅长</li>
+                </a>
+                <a href="#tab4">
+                    <li>推荐</li>
+                </a>
+                <a href="#tab5">
+                    <li>项目</li>
+                </a>
             </ul>
         </div>
-        <div class="tab1"></div>
-        <div class="tab2"></div>
-        <div class="tab3">
-            <div class="yy">
-                <p></p>
-                <p></p>
+        <a name="tab1">
+            <div class="tab1">
+                <img src="http://img.duoziwang.com/2019/01/07021556110686.jpg" />
+                <div class="jj">
+                    <br><br>
+                    <h1>我是陈思全</h1><br>
+                    <h3>我就是我，不一样的烟火。</h3>
+                </div>
             </div>
-            <div class="yy">
-                <p></p>
-                <p></p>
+        </a>
+        <a name="tab2">
+            <div class="tab2">2</div>
+        </a>
+        <a name="tab3">
+            <div class="tab3">3</div>
+        </a>
+        <a name="tab4">4
+            <div class="tab4">
+                <div class="yy">
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="yy">
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="yy">
+                    <p></p>
+                    <p></p>
+                </div>
             </div>
-            <div class="yy">
-                <p></p>
-                <p></p>
+        </a>
+        <a name="tab5">5
+            <div class="tab5">
+                <div class="yy">
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="yy">
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="yy">
+                    <p></p>
+                    <p></p>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 </body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
 
 </html>
