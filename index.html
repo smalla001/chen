@@ -7,19 +7,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的网站</title>
     <style>
-        body {
-            background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wwuP?ver=d452);
-            background-position: center;
-            background-size: cover;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .bgimg {
+            background-position: center center;
             background-repeat: no-repeat;
-            height: 100vh;
+            background-size: cover;
+            height: 101%;
+            margin: -1px 0px 0px -1px;
+            object-fit: cover;
+            padding: 0px;
+            position: absolute;
+            width: 101%;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: -10;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .more {
+            width: 890px;
+            margin: 10px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .tab {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.411);
+            color: white;
+            overflow: hidden;
+        }
+        
+        .tab ul li {
+            float: left;
+            width: 19%;
+            text-align: center;
+            font-size: 23px;
+            margin: 0.5%;
+        }
+        
+        .tab ul li:hover {
+            color: rgb(211, 207, 207);
         }
     </style>
 </head>
 
 <body>
+    <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wwuP?ver=d452" class="bgimg" />
     <div class="more">
-        <div class="tab"></div>
+        <div class="tab">
+            <ul>
+                <li>我</li>
+                <li>简介</li>
+                <li>擅长</li>
+                <li>推荐</li>
+                <li>项目</li>
+            </ul>
+        </div>
         <div class="tab1"></div>
         <div class="tab2"></div>
         <div class="tab3">
