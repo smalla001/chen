@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" />
+
+    <!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js">
+    </script>
+
+    <!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script>
+        $("[did='Load']").show();
+        $(document).ready(function() {
+
+            $("[did='Load']").hide();
+            $("[did='wel1']").show();
+            if (localStorage.saves == undefined || localStorage.saves == "1") {
+                localStorage.saves = "1";
+                $("[did='wel1']").show();
+            } else {
+                $("[did='wel1']").hide();
+                $("[did='wel2']").hide();
+                $("[did='wel3']").hide();
+                $("[did='sp']").show();
+            }
+
+            $("[did='wel1'] .next").click(function() {
+                $("[did='wel1']").hide();
+                $("[did='wel2']").show();
+            });
+            $("[did='wel2'] .next").click(function() {
+                $("[did='wel2']").hide();
+                $("[did='wel3']").show();
+            });
+            $("[did='wel2'] .last").click(function() {
+                $("[did='wel2']").hide();
+                $("[did='wel1']").show();
+            });
+            $("[did='wel3'] .next").click(function() {
+                $("[did='wel3']").hide();
+                $("[did='sp']").show();
+            });
+            $("[did='wel3'] .last").click(function() {
+                $("[did='wel3']").hide();
+                $("[did='wel2']").show();
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+    <title>小A</title>
+    <style>
+        .in {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 20px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        body {
+            background-color: royalblue;
+            height: 600px;
+        }
+        
+        .activity {
+            position: relative;
+            left: 15px;
+            top: 30px;
+            width: 370px;
+            height: 570px;
+        }
+        
+        .activity[did=Load] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .load {
+            border: grey solid 20px;
+            border-top: cyan solid 20px;
+            animation: loadmove 1s infinite linear;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+        }
+        
+        @keyframes loadmove {
+            to {
+                transform: rotate(0deg);
+            }
+            from {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .activity[did=Load] h2 {
+            font-size: 33px;
+        }
+        
+        .smalla-eyes div:nth-child(1) {
+            width: 36%;
+            height: 80px;
+            border-radius: 25px;
+            float: left;
+            margin-left: 18%;
+        }
+        
+        .smalla-eyes div:nth-child(2) {
+            width: 36%;
+            height: 80px;
+            border-radius: 25px;
+            float: left;
+            margin-left: 0;
+        }
+        
+        .smalla-eyes div:nth-child(1) div {
+            animation: zeye 3s infinite linear;
+        }
+        
+        .smalla-eyes div:nth-child(2) div {
+            animation: zeye 3s infinite linear;
+        }
+        
+        .smalla-eyes div div {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+        
+        .smalla-face {
+            clear: left;
+        }
+        
+        .smalla-face div:nth-child(1) {
+            width: 10px;
+            height: 10px;
+            background-color: orangered;
+            border-radius: 30px;
+            float: left;
+        }
+        
+        .smalla-face div:nth-child(2) {
+            width: 10px;
+            height: 10px;
+            background-color: orangered;
+            border-radius: 30px;
+            float: right;
+        }
+        
+        .smalla-mout {
+            border-radius: 50%;
+            border: transparent solid 5px;
+            border-bottom: #000 solid 5px;
+            border-left: #000 solid 5px;
+            transform: rotate(-45deg);
+            width: 35px;
+            height: 35px;
+            margin: 15px auto;
+        }
+        
+        @keyframes zeye {
+            0%,
+            95% {
+                height: 80px;
+                margin-top: 0px;
+            }
+            97.5% {
+                height: 0px;
+                margin-top: 20px;
+            }
+        }
+        
+        .smalla-more {
+            height: 140px;
+            width: 185px;
+        }
+        
+        @keyframes zeys {
+            0% {
+                margin-left: 18px;
+            }
+            50% {
+                margin-left: 22px;
+            }
+        }
+        
+        .fr {
+            float: right;
+        }
+        
+        .activity[did=wel1] .text {
+            margin-top: 100px;
+        }
+        
+        .activity[did=wel1] .smalla-more {
+            padding-top: 50px;
+        }
+        
+        .activity[did=wel1] {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .next {
+            font-size: 50px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        
+        .last {
+            font-size: 50px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+        
+        .activity[did=wel1] .set1 h1,
+        .activity[did=wel1] .set1 button {
+            float: left;
+        }
+        
+        .activity[did=wel3] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .activity[did=wel3] h1 {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="in">
+        <div class="activity" did="Load">
+            <div class="e">
+                <div class="load"></div>
+                <h2>正在开机</h2>
+            </div>
+        </div>
+        <div class="activity" did="wel1">
+            <div class="smalla-more">
+                <div class="smalla-eyes">
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="smalla-face">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="smalla-mout">
+                    <div></div>
+                </div>
+            </div>
+            <div class="fr">
+                <h1 class="text">
+                    <h1>欢迎使用小A </h1>
+                    <h1> 在使用前 </h1>
+                    <h1> 你需要设置信息</h1>
+                </h1>
+            </div>
+            <div>
+                <span class="bi bi-arrow-right next"></span>
+            </div>
+        </div>
+        <div class="activity" did="wel2">
+            <div class="set1">
+                <h2>屏幕模式：<button type="button" class="btn btn-primary dropdown-toggle" id="setpin" data-toggle="dropdown">
+                窄屏
+                </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:$('#setpin').text('窄屏');">窄屏</a>
+                        <a class="dropdown-item" href="javascript:$('#setpin').text('宽屏');">宽屏</a>
+                    </div>
+                </h2>
+            </div>
+            <div class="set2">
+                <h2>用户名：<input type="text" id="usern"></h2>
+            </div>
+            <div class="set3">
+                <h2>密码：<input type="password" id="passn"></h2>
+            </div>
+            <div class="set4">
+                <h2>激活码：<input type="text" id="starn"></h2>
+            </div>
+            <div>
+                <span class="bi bi-arrow-right next"></span>
+            </div>
+            <div>
+                <span class="bi bi-arrow-left last"></span>
+            </div>
+        </div>
+        <div class="activity" did="wel3">
+            <div class="e">
+                <div class="smalla-more">
+                    <div class="smalla-eyes">
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="smalla-face">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="smalla-mout">
+                        <div></div>
+                    </div>
+                </div>
+                <h1>设置成功</h1>
+                <h1>开始体验吧</h1>
+            </div>
+            <div>
+                <span class="bi bi-arrow-right next"></span>
+            </div>
+            <div>
+                <span class="bi bi-arrow-left last"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
