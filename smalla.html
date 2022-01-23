@@ -6,48 +6,9 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" />
 
     <!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
-    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js">
-    </script>
 
-    <!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
     <script>
         $("[did='Load']").show();
-        $(document).ready(function() {
-
-            $("[did='Load']").hide();
-            $("[did='wel1']").show();
-            if (localStorage.saves == undefined || localStorage.saves == "1") {
-                localStorage.saves = "1";
-                $("[did='wel1']").show();
-            } else {
-                $("[did='wel1']").hide();
-                $("[did='wel2']").hide();
-                $("[did='wel3']").hide();
-                $("[did='sp']").show();
-            }
-
-            $("[did='wel1'] .next").click(function() {
-                $("[did='wel1']").hide();
-                $("[did='wel2']").show();
-            });
-            $("[did='wel2'] .next").click(function() {
-                $("[did='wel2']").hide();
-                $("[did='wel3']").show();
-            });
-            $("[did='wel2'] .last").click(function() {
-                $("[did='wel2']").hide();
-                $("[did='wel1']").show();
-            });
-            $("[did='wel3'] .next").click(function() {
-                $("[did='wel3']").hide();
-                $("[did='sp']").show();
-            });
-            $("[did='wel3'] .last").click(function() {
-                $("[did='wel3']").hide();
-                $("[did='wel2']").show();
-            });
-        });
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,6 +16,15 @@
     <link rel="stylesheet" href="bootstrap-icons.css">
     <title>小A</title>
     <style>
+        *,
+         ::after,
+         ::before {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -o-userselect: none;
+        }
+        
         .in {
             width: 400px;
             background-color: #fff;
@@ -225,9 +195,9 @@
             cursor: pointer;
         }
         
-        .activity[did=wel1] .set1 h1,
-        .activity[did=wel1] .set1 button {
-            float: left;
+        .activity[did=wel2] .set1 h1,
+        .activity[did=wel2] .set1 button {
+            display: inline-block;
         }
         
         .activity[did=wel3] {
@@ -240,6 +210,48 @@
             width: 100%;
             text-align: center;
             margin-top: 20px;
+        }
+        
+        .activity[did=sp] .fj {
+            display: block;
+            position: relative;
+            width: 100px;
+            height: 0.5px;
+            background-color: #000;
+            left: 130px;
+            transform: rotate(-45deg);
+        }
+        
+        .activity[did=sp] .time {
+            float: right;
+            margin-right: 20px;
+        }
+        
+        .activity[did=sp] .gops {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 360px;
+            cursor: pointer;
+        }
+        
+        .activity[did=sp] {
+            position: relative;
+        }
+        
+        .activity[did=sp] .gops span {
+            font-size: 30px;
+            display: block;
+            width: 360px;
+            text-align: center;
+        }
+        
+        .activity[did=sp] .gops .dx {
+            width: 250px;
+            height: 0.5px;
+            background-color: #000;
+            margin-left: 55px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -283,13 +295,7 @@
         </div>
         <div class="activity" did="wel2">
             <div class="set1">
-                <h2>屏幕模式：<button type="button" class="btn btn-primary dropdown-toggle" id="setpin" data-toggle="dropdown">
-                窄屏
-                </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="javascript:$('#setpin').text('窄屏');">窄屏</a>
-                        <a class="dropdown-item" href="javascript:$('#setpin').text('宽屏');">宽屏</a>
-                    </div>
+                <h2>屏幕模式：<input type="text" id="setpin" placeholder="请输入窄屏或宽屏" />
                 </h2>
             </div>
             <div class="set2">
@@ -299,7 +305,7 @@
                 <h2>密码：<input type="password" id="passn"></h2>
             </div>
             <div class="set4">
-                <h2>激活码：<input type="text" id="starn"></h2>
+                <h2>激活码：<input type="text" id="starn" placeholder="激活码激活系统，未激活不使用"></h2>
             </div>
             <div>
                 <span class="bi bi-arrow-right next"></span>
@@ -337,8 +343,145 @@
                 <span class="bi bi-arrow-left last"></span>
             </div>
         </div>
+        <div class="activity" did="sp">
+            <div class="smalla-more">
+                <div class="smalla-eyes">
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="smalla-face">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="smalla-mout">
+                    <div></div>
+                </div>
+            </div>
+            <span class="fj"></span>
+            <div class="time">
+                <h2>
+                    <span id="hh"></span>:
+                    <span id="mm"></span>
+                    <span id="ss" style="display: none;"></span>
+                </h2>
+                <h4>
+                    <span id="yyyy"></span>-
+                    <span id="mr"></span>-
+                    <span id="dd"></span>
+                </h4>
+            </div>
+            <div class="gops">
+                <span class="bi bi-lock"></span>
+                <div class="dx"></div>
+            </div>
+        </div>
+        <div class="activity" did="hsp">宽锁屏</div>
+        <div class="activity" did="psp">窄解锁</div>
+        <div class="activity" did="hpsp">宽解锁</div>
+        <div class="activity" did="bin">窄主页</div>
+        <div class="activity" did="hbin">宽主页</div>
     </div>
 </body>
+<script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js">
+</script>
 
+<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+<script src="https://www.layuicdn.com/layer-v3.5.1/layer.js"></script>
+<script>
+    starttime();
+
+    function starttime() {
+        var dt = new Date();
+        $("[did='sp'] #hh").text(dt.getHours());
+        $("[did='sp'] #mm").text(dt.getMinutes());
+        $("[did='sp'] #ss").text(dt.getSeconds());
+        $("[did='sp'] #yyyy").text(dt.getFullYear());
+        $("[did='sp'] #mr").text(dt.getMonth() + 1);
+        $("[did='sp'] #dd").text(dt.getDate());
+        setTimeout(() => {
+            starttime();
+        }, 1000);
+    }
+    $(document).ready(function() {
+        var zho = "1e368";
+        $("[did='Load']").hide();
+        $("[did='wel1']").show();
+        if (localStorage.saves == undefined || localStorage.saves == "1") {
+            localStorage.saves = "1";
+            localStorage.username = "";
+            localStorage.password = "";
+            localStorage.zp = "窄屏";
+            $("[did='wel1']").show();
+        } else {
+            $("[did='wel1']").hide();
+            $("[did='wel2']").hide();
+            $("[did='wel3']").hide();
+            if (localStorage.zp == "窄屏") {
+                $(".in").css("width", "400px");
+                $(".activity").css("width", "360px");
+                $("[did='sp']").show();
+                $("[did='hsp']").hide();
+            } else if (localStorage.zp == "宽屏") {
+                $(".in").css("width", "760px");
+                $(".activity").css("width", "720px");
+                $("[did='sp']").hide();
+                $("[did='hsp']").show();
+            }
+        }
+
+        $("[did='wel1'] .next").click(function() {
+            $("[did='wel1']").hide();
+            $("[did='wel2']").show();
+        });
+        $("[did='wel2'] .next").click(function() {
+            var user = $("#usern").val();
+            var pass = $("#passn").val();
+            var star = $("#starn").val();
+            if (user != "" && pass != "" && star == zho) {
+                if ($("#setpin").val() == "窄屏" || $("#setpin").val() == "宽屏") {
+                    localStorage.saves = "2";
+                    localStorage.username = user;
+                    localStorage.password = pass;
+                    localStorage.zp = $("#setpin").val();
+                    $("[did='wel2']").hide();
+                    $("[did='wel3']").show();
+                } else {
+                    layer.msg("验证失败");
+                }
+            } else {
+                layer.msg("验证失败");
+            }
+        });
+        $("[did='wel2'] .last").click(function() {
+            $("[did='wel2']").hide();
+            $("[did='wel1']").show();
+        });
+        $("[did='wel3'] .next").click(function() {
+            $("[did='wel1']").hide();
+            $("[did='wel2']").hide();
+            $("[did='wel3']").hide();
+            if (localStorage.zp == "窄屏") {
+                $(".in").css("width", "400px");
+                $(".activity").css("width", "360px");
+                $("[did='sp']").show();
+                $("[did='hsp']").hide();
+            } else if (localStorage.zp == "宽屏") {
+                $(".in").css("width", "760px");
+                $(".activity").css("width", "720px");
+                $("[did='sp']").hide();
+                $("[did='hsp']").show();
+            }
+        });
+        $("[did='wel3'] .last").click(function() {
+            $("[did='wel3']").hide();
+            $("[did='wel2']").show();
+        });
+    });
+</script>
 
 </html>
