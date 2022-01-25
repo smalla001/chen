@@ -1,1 +1,1444 @@
-<!DOCTYPE html> <html> <head> <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" /> <script> if (localStorage.saves == undefined || localStorage.saves == "1") { alert("用户浏览器兼容性须知\n    欢迎你使用我们，我们会为你们创造更好的体验。在使用前，我们希望你们了解一些事。首先，我们编译该代码的时候使用了jQuery，如果你使用的浏览器不支持，手机端请下载最新版的浏览器即可访问，电脑端请使用edge或chrome>46.0浏览器，因为我们的网页使用了CSS3动画和flex布局，IE浏览器不支持。\n我们非常抱歉对某些用户带来的不便，我们会尽量解决浏览器兼容性的问题，敬请谅解！"); } $("[did='Load']").show(400); </script> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="bootstrap-icons.css"> <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"> <title>小A</title> <style> *, ::after, ::before { user-select: none; -webkit-user-select: none; -moz-user-select: none; -o-userselect: none; } .in { width: 400px; background-color: #fff; border-radius: 20px; height: 600px; margin: 0 auto; overflow: hidden; } body { background-color: royalblue; height: 600px; } .activity { position: relative; left: 15px; top: 15px; margin-bottom: 15px; width: 370px; height: 570px; } .activity[did=Load] { display: flex; align-items: center; justify-content: center; } .load { border: grey solid 20px; border-top: cyan solid 20px; animation: loadmove 1s infinite linear; width: 100px; height: 100px; border-radius: 100px; } @keyframes loadmove { to { transform: rotate(0deg); } from { transform: rotate(360deg); } } .activity[did=Load] h2 { font-size: 33px; } .smalla-eyes div:nth-child(1) { width: 36%; height: 80px; border-radius: 25px; float: left; margin-left: 18%; } .smalla-eyes div:nth-child(2) { width: 36%; height: 80px; border-radius: 25px; float: left; margin-left: 0; } .smalla-eyes div:nth-child(1) div { animation: zeye 3s infinite linear; } .smalla-eyes div:nth-child(2) div { animation: zeye 3s infinite linear; } .smalla-eyes div div { width: 100%; height: 100%; background-color: black; } .smalla-face { clear: left; } .smalla-face div:nth-child(1) { width: 10px; height: 10px; background-color: orangered; border-radius: 30px; float: left; } .smalla-face div:nth-child(2) { width: 10px; height: 10px; background-color: orangered; border-radius: 30px; float: right; } .smalla-mout { border-radius: 50%; border: transparent solid 5px; border-bottom: #000 solid 5px; border-left: #000 solid 5px; transform: rotate(-45deg); width: 35px; height: 35px; margin: 15px auto; } @keyframes zeye { 0%, 95% { height: 80px; margin-top: 0px; } 97.5% { height: 0px; margin-top: 20px; } } .smalla-more { height: 140px; width: 185px; display: block; } @keyframes zeys { 0% { margin-left: 18px; } 50% { margin-left: 22px; } } .fr { float: right; } .activity[did=wel1] .text { margin-top: 100px; } .activity[did=wel1] .smalla-more { padding-top: 50px; } .activity[did=wel1] { overflow: hidden; position: relative; } .next { font-size: 50px; position: absolute; bottom: 10px; right: 10px; cursor: pointer; } .last { font-size: 50px; position: absolute; bottom: 10px; left: 10px; cursor: pointer; } .activity[did=wel2] .set1 h1, .activity[did=wel2] .set1 button { display: inline-block; } .activity[did=wel3] { display: flex; align-items: center; justify-content: center; flex-direction: column; } .activity[did=wel3] h1 { width: 100%; text-align: center; margin-top: 20px; } .activity[did=sp] .fj { display: block; position: relative; width: 100px; height: 0.5px; background-color: #000; left: 130px; transform: rotate(-45deg); } .activity[did=sp] .smalla-more { padding: 5px; } .activity[did=sp] .time { float: right; margin-right: 20px; } .activity[did=sp] .gops { position: absolute; bottom: 0; left: 0; width: 360px; cursor: pointer; } .activity[did=sp] { position: relative; background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg); background-size: 400px; background-position: center; } .activity[did=sp] .gops span { font-size: 30px; display: block; width: 360px; text-align: center; } .activity[did=sp] .gops .dx { width: 250px; height: 0.5px; background-color: #000; margin-left: 55px; margin-bottom: 10px; } .activity[did=hsp] .db { display: flex; justify-content: space-around; position: relative; top: 50px; } .activity[did=hsp] .fj { display: block; width: 0.5px; height: 100px; background-color: #000; position: relative; top: 20px; } .activity[did=hsp] .time { align-items: center; display: flex; align-items: center; justify-content: center; flex-direction: column; } .activity[did=hbin] .db { display: flex; justify-content: space-around; position: relative; top: 50px; } .activity[did=hbin] .fj { display: block; width: 0.5px; height: 100px; background-color: #000; position: relative; top: 20px; } .activity[did=hbin] .time { align-items: center; display: flex; align-items: center; justify-content: center; flex-direction: column; } .activity[did=hsp] .gops { position: absolute; bottom: 0; left: 0; width: 730px; cursor: pointer; } .activity[did=hsp] { position: relative; background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg); background-size: 800px; background-position: center; } .activity[did=hbin] { position: relative; background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg); background-size: 800px; background-position: center; } .activity[did=hsp] .gops span { font-size: 30px; width: 730px; text-align: center; } .activity[did=hsp] .gops .dx { width: 500px; height: 0.5px; background-color: #000; margin-left: 110px; margin-bottom: 10px; } .activity[did=psp] { background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg); background-size: 400px; background-position: center; } .activity[did=psp] .db { background-color: rgba(255, 255, 255, 0.5); } .activity[did=psp] .db>span { display: inline-block; font-size: 40px; cursor: pointer; } .activity[did=psp] .db .gops span { display: block; font-size: 30px; width: 100%; text-align: center; } .activity[did=psp] .db .gops { display: inline-block; width: 300px; position: relative; top: -10px; } .activity[did=psp] .db .gops div { width: 300px; height: 0.5px; background-color: #000; position: relative; top: 40px; } .activity[did=psp] .js { width: 370px; height: 450px; background-color: rgba(255, 255, 255, 0.5); display: flex; justify-content: center; align-items: center; flex-direction: column; } .activity[did=psp] .js p { font-size: 30px; } .activity[did=psp] .js .sl input, .activity[did=psp] .js .sl button { outline: 0; border: 0; font-size: 20px; background-color: transparent; color: rgba(0, 0, 0, 0.8); } .activity[did=psp] .js .sl { padding-bottom: 7px; border-radius: 40px; border: #000 solid 1px; padding-left: 10px; padding-right: 10px; } .activity[did=psp] .js .sl button { cursor: pointer; padding-top: 5px; text-shadow: #000 0.5px 0.5px 1px; } .activity[did=psp] .gj button { cursor: pointer; outline: 0; border: 0; background-color: transparent; color: blue; } .activity[did=psp] .gj { display: flex; align-items: center; justify-content: center; width: 370px; height: 60px; background-color: rgba(255, 255, 255, 0.5); } .activity[did=hpsp] { background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg); background-size: 800px; background-position: center; } .activity[did=hpsp] .db { background-color: rgba(255, 255, 255, 0.5); } .activity[did=hpsp] .db>span { display: inline-block; font-size: 40px; cursor: pointer; } .activity[did=hpsp] .db .gops span { display: block; font-size: 30px; width: 600px; text-align: center; } .activity[did=hpsp] .db .gops { display: inline-block; width: 300px; position: relative; top: -10px; margin-left: 50px; } .activity[did=hpsp] .db .gops div { width: 600px; height: 0.5px; background-color: #000; position: relative; top: 40px; } .activity[did=hpsp] .js { width: 730px; height: 450px; background-color: rgba(255, 255, 255, 0.5); display: flex; justify-content: center; align-items: center; flex-direction: column; } .activity[did=hpsp] .js p { font-size: 30px; } .activity[did=hpsp] .js .sl input, .activity[did=hpsp] .js .sl button { outline: 0; border: 0; font-size: 20px; background-color: transparent; color: rgba(0, 0, 0, 0.8); } .activity[did=hpsp] .js .sl { padding-bottom: 7px; border-radius: 40px; border: #000 solid 1px; padding-left: 10px; padding-right: 10px; } .activity[did=hpsp] .js .sl button { cursor: pointer; padding-top: 5px; text-shadow: #000 0.5px 0.5px 1px; } .activity[did=hpsp] .gj button { cursor: pointer; outline: 0; border: 0; background-color: transparent; color: blue; } .activity[did=hpsp] .gj { display: flex; align-items: center; justify-content: center; width: 730px; height: 60px; background-color: rgba(255, 255, 255, 0.5); } .activity[did=bin] .fj { display: block; position: relative; width: 100px; height: 0.5px; background-color: #000; left: 130px; transform: rotate(-45deg); } .activity[did=bin] .smalla-more { padding: 5px; padding-top: 30px; } .activity[did=bin] .time { float: right; margin-right: 20px; } .activity[did=bin] { background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg); background-size: 400px; background-position: center; } li { list-style: none; } .activity[did=bin] .yy { position: relative; top: 75px; } .activity[did=bin] .yy ul li p:nth-child(1) { font-size: 40px; width: 40px; height: 40px; line-height: 40px; text-align: center; } .activity[did=bin] .yy ul li p:nth-child(2) { font-size: 16px; } .activity[did=bin] .yy ul { display: flex; justify-content: space-around; width: 370px; padding-left: 0; } .activity[did=bin] .yy ul li:hover { cursor: pointer; box-shadow: #333 0 0 0.5 1; } .activity[did=bin] .cd { position: absolute; bottom: 5px; left: 5px; } .activity[did=bin] .cd p { font-size: 20px; margin-bottom: 0; font-family: '楷体'; font-weight: bold; width: 370px; text-align: center; } .activity[did=bin] .cd span { font-size: 25px; position: absolute; bottom: 2px; right: 10px; cursor: pointer; } .activity[did=hbin] .yy { position: relative; top: 175px; } .activity[did=hbin] .yy ul li p:nth-child(1) { font-size: 40px; width: 40px; height: 40px; line-height: 40px; text-align: center; } .activity[did=hbin] .yy ul li p:nth-child(2) { font-size: 16px; } .activity[did=hbin] .yy ul { display: flex; justify-content: space-around; width: 730px; padding-left: 0; } .activity[did=hbin] .yy ul li:hover { cursor: pointer; box-shadow: #333 0 0 0.5 1; } .activity[did=hbin] .cd { position: absolute; bottom: 5px; left: 5px; } .activity[did=hbin] .cd p { font-size: 20px; margin-bottom: 0; font-family: '楷体'; font-weight: bold; width: 730px; text-align: center; } .activity[did=hbin] .cd span { font-size: 25px; position: absolute; bottom: 2px; right: 10px; cursor: pointer; } </style> </head> <body> <div class="in"> <div class="activity" did="Load"> <div class="e"> <div class="load"></div> <h2>正在开机</h2> </div> </div> <div class="activity" did="wel1"> <div class="smalla-more"> <div class="smalla-eyes"> <div> <div></div> </div> <div> <div></div> </div> </div> <div class="smalla-face"> <div></div> <div></div> </div> <div class="smalla-mout"> <div></div> </div> </div> <div class="fr"> <h1 class="text"> <h1>欢迎使用小A </h1> <h1> 在使用前 </h1> <h1> 你需要设置信息</h1> </h1> </div> <div><span class="bi bi-arrow-right next"></span></div> </div> <div class="activity" did="wel2"> <div class="set1"> <h2>屏幕模式：<input type="text" id="setpin" placeholder="请输入窄屏或宽屏" /></h2> </div> <div class="set2"> <h2>用户名：<input type="text" id="usern"></h2> </div> <div class="set3"> <h2>密码：<input type="password" id="passn"></h2> </div> <div class="set4"> <h2>激活码：<input type="text" id="starn" placeholder="激活码激活系统，未激活不使用"></h2> </div> <div><span class="bi bi-arrow-right next"></span></div> <div><span class="bi bi-arrow-left last"></span></div> </div> <div class="activity" did="wel3"> <div class="smalla-more"> <div class="smalla-eyes"> <div> <div></div> </div> <div> <div></div> </div> </div> <div class="smalla-face"> <div></div> <div></div> </div> <div class="smalla-mout"> <div></div> </div> </div> <h1>设置成功</h1> <h1>开始体验吧</h1> <div><span class="bi bi-arrow-right next"></span></div> <div><span class="bi bi-arrow-left last"></span></div> </div> <div class="activity" did="sp"> <div class="smalla-more"> <div class="smalla-eyes"> <div> <div></div> </div> <div> <div></div> </div> </div> <div class="smalla-face"> <div></div> <div></div> </div> <div class="smalla-mout"> <div></div> </div> </div> <span class="fj"></span> <div class="time"> <h2> <span class="hh"></span>: <span class="mm"></span> <span class="ss" style="display: none;"></span> </h2> <h4> <span class="yyyy"></span>- <span class="mr"></span>- <span class="dd"></span> </h4> </div> <div class="gops"> <span class="fa fa-lock"></span> <div class="dx"></div> </div> </div> <div class="activity" did="hsp"> <div class="db"> <div class="smalla-more"> <div class="smalla-eyes"> <div> <div></div> </div> <div> <div></div> </div> </div> <div class="smalla-face"> <div></div> <div></div> </div> <div class="smalla-mout"> <div></div> </div> </div> <span class="fj"></span> <div class="time"> <h2> <span class="hh"></span>: <span class="mm"></span> <span class="ss" style="display: none;"></span> </h2> <h4> <span class="yyyy"></span>- <span class="mr"></span>- <span class="dd"></span> </h4> </div> </div> <div class="gops"> <span class="fa fa-lock"></span> <div class="dx"></div> </div> </div> <div class="activity" did="psp"> <div class="db"> <span class="bi bi-arrow-left"></span> <div class="gops"> <div class="dx"></div> <span class="fa fa-lock"></span> </div> </div> <div class="js"> <p id="jsuser">账号错误</p> <div class="sl"> <input type="password" id="jspass" placeholder="请输入密码"> <button id="jsgo"><i class="bi bi-arrow-right"></i></button> </div> </div> <div class="gj"> <button>忘记密码</button> </div> </div> <div class="activity" did="hpsp"> <div class="db"> <span class="bi bi-arrow-left"></span> <div class="gops"> <div class="dx"></div> <span class="fa fa-lock"></span> </div> </div> <div class="js"> <p id="hjsuser">账号错误</p> <div class="sl"> <input type="password" id="hjspass" placeholder="请输入密码"> <button id="hjsgo"><i class="bi bi-arrow-right"></i></button> </div> </div> <div class="gj"> <button>忘记密码</button> </div> </div> <div class="activity" did="bin"> <div class="smalla-more"> <div class="smalla-eyes"> <div> <div></div> </div> <div> <div></div> </div> </div> <div class="smalla-face"> <div></div> <div></div> </div> <div class="smalla-mout"> <div></div> </div> </div> <span class="fj"></span> <div class="time"> <h2> <span class="hh"></span>: <span class="mm"></span> <span class="ss" style="display: none;"></span> </h2> <h4> <span class="yyyy"></span>- <span class="mr"></span>- <span class="dd"></span> </h4> </div> <div class="yy"> <ul> <li> <p class="fa fa-android" style="color: rgb(20, 151, 15);"></p> <p>应用</p> </li> <li> <p class="fa fa-gear" style="color: rgb(100, 100, 100);"></p> <p>设置</p> </li> <li> <p class="fa fa-question-circle" style="color: rgb(62, 123, 255);"></p> <p>帮助</p> </li> </ul> <ul> <li> <p class="fa fa-user-circle-o" style="color: rgb(78, 78, 78);"></p> <p>个人</p> </li> <li> <p class="bi bi-arrows-angle-expand" style="transform: rotate(45deg);"></p> <p>宽屏</p> </li> <li> <p class="bi bi-badge-ad" style="color: rgb(255, 52, 52);"></p> <p>推广</p> </li> </ul> </div> <div class="cd"> <p>海内存知己，天涯若比邻。</p> <span class="bi bi-power"></span> </div> </div> <div class="activity" did="hbin"> <div class="db"> <div class="smalla-more"> <div class="smalla-eyes"> <div> <div></div> </div> <div> <div></div> </div> </div> <div class="smalla-face"> <div></div> <div></div> </div> <div class="smalla-mout"> <div></div> </div> </div> <span class="fj"></span> <div class="time"> <h2> <span class="hh"></span>: <span class="mm"></span> <span class="ss" style="display: none;"></span> </h2> <h4> <span class="yyyy"></span>- <span class="mr"></span>- <span class="dd"></span> </h4> </div> </div> <div class="yy"> <ul> <li> <p class="fa fa-android" style="color: rgb(20, 151, 15);"></p> <p>应用</p> </li> <li> <p class="fa fa-gear" style="color: rgb(100, 100, 100);"></p> <p>设置</p> </li> <li> <p class="fa fa-question-circle" style="color: rgb(62, 123, 255);"></p> <p>帮助</p> </li> <li> <p class="fa fa-user-circle-o" style="color: rgb(78, 78, 78);"></p> <p>个人</p> </li> <li> <p class="bi bi-arrows-angle-expand" style="transform: rotate(45deg);"></p> <p>宽屏</p> </li> <li> <p class="bi bi-badge-ad" style="color: rgb(255, 52, 52);"></p> <p>推广</p> </li> </ul> </div> <div class="cd"> <p>海内存知己，天涯若比邻。</p> <span class="bi bi-power"></span> </div> </div> </div> </body> <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"> </script> <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script> <script src="https://www.layuicdn.com/layer-v3.5.1/layer.js"></script> <script> starttime(); function starttime() { var dt = new Date(); $(".hh").text(dt.getHours()); $(".mm").text(dt.getMinutes()); $(".ss").text(dt.getSeconds()); $(".yyyy").text(dt.getFullYear()); $(".mr").text(dt.getMonth() + 1); $(".dd").text(dt.getDate()); setTimeout(() => { starttime(); }, 1000); } $(document).ready(function() { var zho = "1e368"; $("[did='Load']").hide(400); $("[did='wel1']").show(400); if (localStorage.saves == undefined || localStorage.saves == "1") { localStorage.saves = "1"; localStorage.username = ""; localStorage.password = ""; localStorage.zp = "窄屏"; $("[did='wel1']").show(400); } else { $("[did='wel1']").hide(400); $("[did='wel2']").hide(400); $("[did='wel3']").hide(400); if (localStorage.zp == "窄屏") { $(".in").css("width", "400px"); $(".activity").css("width", "370px"); $("[did='sp']").show(400); $("[did='hsp']").hide(400); } else if (localStorage.zp == "宽屏") { $(".in").css("width", "770px"); $(".activity").css("width", "730px"); $("[did='sp']").hide(); $("[did='hsp']").show(400); } } $("[did='wel1'] .next").click(function() { $("[did='wel1']").hide(400); $("[did='wel2']").show(400); }); $("[did='wel2'] .next").click(function() { var user = $("#usern").val(); var pass = $("#passn").val(); var star = $("#starn").val(); if (user != "" && pass != "" && star == zho) { if ($("#setpin").val() == "窄屏" || $("#setpin").val() == "宽屏") { localStorage.saves = "2"; localStorage.username = user; localStorage.password = pass; localStorage.zp = $("#setpin").val(); $("[did='wel2']").hide(400); $("[did='wel3']").show(400); } else { layer.msg("验证失败"); } } else { layer.msg("验证失败"); } }); $("[did='wel2'] .last").click(function() { $("[did='wel2']").hide(400); $("[did='wel1']").show(400); }); $("[did='wel3'] .next").click(function() { $("[did='wel1']").hide(400); $("[did='wel2']").hide(400); $("[did='wel3']").hide(400); if (localStorage.zp == "窄屏") { $(".in").css("width", "400px"); $(".activity").css("width", "370px"); $("[did='sp']").show(400); $("[did='hsp']").hide(400); } else if (localStorage.zp == "宽屏") { $(".in").css("width", "770px"); $(".activity").css("width", "730px"); $("[did='sp']").hide(400); $("[did='hsp']").show(400); } }); $("[did='wel3'] .last").click(function() { $("[did='wel3']").hide(400); $("[did='wel2']").show(400); }); $("[did='sp'] .gops").click(function() { $("[did='sp']").hide(400); $("[did='hsp']").hide(); $("[did='psp']").show(400); $("#jsuser").text(localStorage.username); }); $("[did='hsp'] .gops").click(function() { $("[did='sp']").hide(); $("[did='hsp']").hide(400); $("[did='psp']").hide(); $("[did='hpsp']").show(400); $("#hjsuser").text(localStorage.username); }); $("[did='psp'] .db>span").click(function() { $("[did='sp']").show(400); $("[did='psp']").hide(400); }); $("[did='psp'] #jsgo").click(function() { if ($("#jspass").val() == localStorage.password) { $("[did='psp']").hide(400); $("[did='hpsp']").hide(); $("[did='bin']").show(400); document.getElementById("jspass").value = ""; } else { layer.msg("密码错误"); } }); $("[did='psp'] .gj>button").click(function() { layer.open({ title: "忘记密码向导", content: "&nbsp;&nbsp;&nbsp;&nbsp;你忘记了密码，必须通过清除数据的方式<br>登录，确定清除数据？", btn: ["取消", "确定"], yes: function(index, layero) { layer.msg("你仔细想想，或许就想起来了。"); }, btn2: function(index, layero) { localStorage.saves = "1"; layer.msg("已清除，请手动刷新。"); setTimeout(function() { window.location.href = "#"; }, 1500); } }); }); $("[did='hpsp'] .db>span").click(function() { $("[did='hsp']").show(400); $("[did='hpsp']").hide(400); }); $("[did='hpsp'] #hjsgo").click(function() { if ($("#hjspass").val() == localStorage.password) { $("[did='psp']").hide(); $("[did='hpsp']").hide(400); $("[did='bin']").hide(); $("[did='hbin']").show(400); document.getElementById("hjspass").value = ""; } else { layer.msg("密码错误"); } }); $("[did='hpsp'] .gj>button").click(function() { layer.open({ title: "忘记密码向导", content: "&nbsp;&nbsp;&nbsp;&nbsp;你忘记了密码，必须通过清除数据的方式<br>登录，确定清除数据？", btn: ["取消", "确定"], yes: function(index, layero) { layer.msg("你仔细想想，或许就想起来了。"); }, btn2: function(index, layero) { localStorage.saves = "1"; layer.msg("已清除，请手动刷新。"); setTimeout(function() { window.location.href = "#"; }, 1500); } }); }); $("[did='bin'] .cd span").click(function() { $("[did='sp']").show(400); $("[did='bin']").hide(400); }); $("[did='hbin'] .cd span").click(function() { $("[did='hsp']").show(400); $("[did='hbin']").hide(400); }); }); </script> </html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" />
+
+    <script>
+        if (localStorage.saves == undefined || localStorage.saves == "1") {
+            alert("用户浏览器兼容性须知\n    欢迎你使用我们，我们会为你们创造更好的体验。在使用前，我们希望你们了解一些事。首先，我们编译该代码的时候使用了jQuery，如果你使用的浏览器不支持，手机端请下载最新版的浏览器即可访问，电脑端请使用edge或chrome>46.0浏览器，因为我们的网页使用了CSS3动画和flex布局，IE浏览器不支持。\n    我们非常抱歉对某些用户带来的不便，我们会尽量解决浏览器兼容性的问题，敬请谅解！");
+        }
+        $("[did='Load']").show(400);
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../HTML插件/bootstrap/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <title>小A</title>
+    <style>
+        *,
+         ::after,
+         ::before {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+        }
+        
+        .in {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 20px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        body {
+            background-color: royalblue;
+            height: 600px;
+        }
+        
+        .activity {
+            position: relative;
+            left: 15px;
+            top: 15px;
+            margin-bottom: 15px;
+            width: 370px;
+            height: 570px;
+        }
+        
+        .activity[did=Load] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .load {
+            border: grey solid 20px;
+            border-top: cyan solid 20px;
+            animation: loadmove 1s infinite linear;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+        }
+        
+        @keyframes loadmove {
+            to {
+                transform: rotate(0deg);
+            }
+            from {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .activity[did=Load] h2 {
+            font-size: 33px;
+        }
+        
+        .smalla-eyes div:nth-child(1) {
+            width: 36%;
+            height: 80px;
+            border-radius: 25px;
+            float: left;
+            margin-left: 18%;
+        }
+        
+        .smalla-eyes div:nth-child(2) {
+            width: 36%;
+            height: 80px;
+            border-radius: 25px;
+            float: left;
+            margin-left: 0;
+        }
+        
+        .smalla-eyes div:nth-child(1) div {
+            animation: zeye 3s infinite linear;
+        }
+        
+        .smalla-eyes div:nth-child(2) div {
+            animation: zeye 3s infinite linear;
+        }
+        
+        .smalla-eyes div div {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+        
+        .smalla-face {
+            clear: left;
+        }
+        
+        .smalla-face div:nth-child(1) {
+            width: 10px;
+            height: 10px;
+            background-color: orangered;
+            border-radius: 30px;
+            float: left;
+        }
+        
+        .smalla-face div:nth-child(2) {
+            width: 10px;
+            height: 10px;
+            background-color: orangered;
+            border-radius: 30px;
+            float: right;
+        }
+        
+        .smalla-mout {
+            border-radius: 50%;
+            border: transparent solid 5px;
+            border-bottom: #000 solid 5px;
+            border-left: #000 solid 5px;
+            transform: rotate(-45deg);
+            width: 35px;
+            height: 35px;
+            margin: 15px auto;
+        }
+        
+        @keyframes zeye {
+            0%,
+            95% {
+                height: 80px;
+                margin-top: 0px;
+            }
+            97.5% {
+                height: 0px;
+                margin-top: 20px;
+            }
+        }
+        
+        .smalla-more {
+            height: 140px;
+            width: 185px;
+            display: block;
+        }
+        
+        @keyframes zeys {
+            0% {
+                margin-left: 18px;
+            }
+            50% {
+                margin-left: 22px;
+            }
+        }
+        
+        .fr {
+            float: right;
+        }
+        
+        .activity[did=wel1] .text {
+            margin-top: 100px;
+        }
+        
+        .activity[did=wel1] .smalla-more {
+            padding-top: 50px;
+        }
+        
+        .activity[did=wel1] {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .next {
+            font-size: 50px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        
+        .last {
+            font-size: 50px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+        
+        .activity[did=wel2] .set1 h1,
+        .activity[did=wel2] .set1 button {
+            display: inline-block;
+        }
+        
+        .activity[did=wel3] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .activity[did=wel3] h1 {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .activity[did=sp] .fj {
+            display: block;
+            position: relative;
+            width: 100px;
+            height: 0.5px;
+            background-color: #000;
+            left: 130px;
+            transform: rotate(-45deg);
+        }
+        
+        .activity[did=sp] .smalla-more {
+            padding: 5px;
+        }
+        
+        .activity[did=sp] .time {
+            float: right;
+            margin-right: 20px;
+        }
+        
+        .activity[did=sp] .gops {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 360px;
+            cursor: pointer;
+        }
+        
+        .activity[did=sp] {
+            position: relative;
+            background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+            background-size: 400px;
+            background-position: center;
+        }
+        
+        .activity[did=sp] .gops span {
+            font-size: 30px;
+            display: block;
+            width: 360px;
+            text-align: center;
+        }
+        
+        .activity[did=sp] .gops .dx {
+            width: 250px;
+            height: 0.5px;
+            background-color: #000;
+            margin-left: 55px;
+            margin-bottom: 10px;
+        }
+        
+        .activity[did=hsp] .db {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            top: 50px;
+        }
+        
+        .activity[did=hsp] .fj {
+            display: block;
+            width: 0.5px;
+            height: 100px;
+            background-color: #000;
+            position: relative;
+            top: 20px;
+        }
+        
+        .activity[did=hsp] .time {
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .activity[did=hbin] .db {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            top: 50px;
+        }
+        
+        .activity[did=hbin] .fj {
+            display: block;
+            width: 0.5px;
+            height: 100px;
+            background-color: #000;
+            position: relative;
+            top: 20px;
+        }
+        
+        .activity[did=hbin] .time {
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .activity[did=hsp] .gops {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 730px;
+            cursor: pointer;
+        }
+        
+        .activity[did=hsp] {
+            position: relative;
+            background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+            background-size: 800px;
+            background-position: center;
+        }
+        
+        .activity[did=hbin] {
+            position: relative;
+            background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+            background-size: 800px;
+            background-position: center;
+        }
+        
+        .activity[did=hsp] .gops span {
+            font-size: 30px;
+            width: 730px;
+            text-align: center;
+        }
+        
+        .activity[did=hsp] .gops .dx {
+            width: 500px;
+            height: 0.5px;
+            background-color: #000;
+            margin-left: 110px;
+            margin-bottom: 10px;
+        }
+        
+        .activity[did=psp] {
+            background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+            background-size: 400px;
+            background-position: center;
+        }
+        
+        .activity[did=psp] .db {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .activity[did=psp] .db>span {
+            display: inline-block;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        
+        .activity[did=psp] .db .gops span {
+            display: block;
+            font-size: 30px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .activity[did=psp] .db .gops {
+            display: inline-block;
+            width: 300px;
+            position: relative;
+            top: -10px;
+        }
+        
+        .activity[did=psp] .db .gops div {
+            width: 300px;
+            height: 0.5px;
+            background-color: #000;
+            position: relative;
+            top: 40px;
+        }
+        
+        .activity[did=psp] .js {
+            width: 370px;
+            height: 450px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .activity[did=psp] .js p {
+            font-size: 30px;
+        }
+        
+        .activity[did=psp] .js .sl input,
+        .activity[did=psp] .js .sl button {
+            outline: 0;
+            border: 0;
+            font-size: 20px;
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .activity[did=psp] .js .sl {
+            padding-bottom: 7px;
+            border-radius: 40px;
+            border: #000 solid 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .activity[did=psp] .js .sl button {
+            cursor: pointer;
+            padding-top: 5px;
+            text-shadow: #000 0.5px 0.5px 1px;
+        }
+        
+        .activity[did=psp] .gj button {
+            cursor: pointer;
+            outline: 0;
+            border: 0;
+            background-color: transparent;
+            color: blue;
+        }
+        
+        .activity[did=psp] .gj {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 370px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .activity[did=hpsp] {
+            background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+            background-size: 800px;
+            background-position: center;
+        }
+        
+        .activity[did=hpsp] .db {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .activity[did=hpsp] .db>span {
+            display: inline-block;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        
+        .activity[did=hpsp] .db .gops span {
+            display: block;
+            font-size: 30px;
+            width: 600px;
+            text-align: center;
+        }
+        
+        .activity[did=hpsp] .db .gops {
+            display: inline-block;
+            width: 300px;
+            position: relative;
+            top: -10px;
+            margin-left: 50px;
+        }
+        
+        .activity[did=hpsp] .db .gops div {
+            width: 600px;
+            height: 0.5px;
+            background-color: #000;
+            position: relative;
+            top: 40px;
+        }
+        
+        .activity[did=hpsp] .js {
+            width: 730px;
+            height: 450px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .activity[did=hpsp] .js p {
+            font-size: 30px;
+        }
+        
+        .activity[did=hpsp] .js .sl input,
+        .activity[did=hpsp] .js .sl button {
+            outline: 0;
+            border: 0;
+            font-size: 20px;
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .activity[did=hpsp] .js .sl {
+            padding-bottom: 7px;
+            border-radius: 40px;
+            border: #000 solid 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .activity[did=hpsp] .js .sl button {
+            cursor: pointer;
+            padding-top: 5px;
+            text-shadow: #000 0.5px 0.5px 1px;
+        }
+        
+        .activity[did=hpsp] .gj button {
+            cursor: pointer;
+            outline: 0;
+            border: 0;
+            background-color: transparent;
+            color: blue;
+        }
+        
+        .activity[did=hpsp] .gj {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 730px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .activity[did=bin] .fj {
+            display: block;
+            position: relative;
+            width: 100px;
+            height: 0.5px;
+            background-color: #000;
+            left: 130px;
+            transform: rotate(-45deg);
+        }
+        
+        .activity[did=bin] .smalla-more {
+            padding: 5px;
+            padding-top: 30px;
+        }
+        
+        .activity[did=bin] .time {
+            float: right;
+            margin-right: 20px;
+        }
+        
+        .activity[did=bin] {
+            background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+            background-size: 400px;
+            background-position: center;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .activity[did=bin] .yy {
+            position: relative;
+            top: 75px;
+        }
+        
+        .activity[did=bin] .yy ul li p:nth-child(1) {
+            font-size: 40px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        .activity[did=bin] .yy ul li p:nth-child(2) {
+            font-size: 16px;
+        }
+        
+        .activity[did=bin] .yy ul {
+            display: flex;
+            justify-content: space-around;
+            width: 370px;
+            padding-left: 0;
+        }
+        
+        .activity[did=bin] .yy ul li:hover {
+            cursor: pointer;
+            box-shadow: #333 0 0 0.5 1;
+        }
+        
+        .activity[did=bin] .cd {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+        }
+        
+        .activity[did=bin] .cd p {
+            font-size: 20px;
+            margin-bottom: 0;
+            font-family: '楷体';
+            font-weight: bold;
+            width: 370px;
+            text-align: center;
+        }
+        
+        .activity[did=bin] .cd span {
+            font-size: 25px;
+            position: absolute;
+            bottom: 2px;
+            right: 10px;
+            cursor: pointer;
+        }
+        
+        .activity[did=hbin] .yy {
+            position: relative;
+            top: 175px;
+        }
+        
+        .activity[did=hbin] .yy ul li p:nth-child(1) {
+            font-size: 40px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        .activity[did=hbin] .yy ul li p:nth-child(2) {
+            font-size: 16px;
+        }
+        
+        .activity[did=hbin] .yy ul {
+            display: flex;
+            justify-content: space-around;
+            width: 730px;
+            padding-left: 0;
+        }
+        
+        .activity[did=hbin] .yy ul li:hover {
+            cursor: pointer;
+            box-shadow: #333 0 0 0.5 1;
+        }
+        
+        .activity[did=hbin] .cd {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+        }
+        
+        .activity[did=hbin] .cd p {
+            font-size: 20px;
+            margin-bottom: 0;
+            font-family: '楷体';
+            font-weight: bold;
+            width: 730px;
+            text-align: center;
+        }
+        
+        .activity[did=hbin] .cd span {
+            font-size: 25px;
+            position: absolute;
+            bottom: 2px;
+            right: 10px;
+            cursor: pointer;
+        }
+        
+        .activity[did=ads] {
+            position: relative;
+            overflow-y: scroll;
+        }
+        
+        .activity[did=ads]::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .activity[did=ads] .hd span {
+            font-size: 35px;
+        }
+        
+        .activity[did=ads] .hd span:nth-child(1) {
+            position: relative;
+            top: 5;
+            left: 5;
+        }
+        
+        .activity[did=ads] .hd span:nth-child(2) {
+            position: absolute;
+            left: 100px;
+            top: 5;
+        }
+        
+        .activity[did=ads] .hd span:nth-child(3) {
+            float: right;
+        }
+        
+        .activity[did=ads] .hd {
+            position: fixed;
+            width: 370px;
+            height: 53px;
+            background-color: #fff;
+            z-index: 1;
+        }
+        
+        .activity[did=ads] ul {
+            position: relative;
+            top: 53px;
+            padding-left: 0;
+        }
+        
+        .activity[did=ads] ul a {
+            display: block;
+            width: 370px;
+            height: 300px;
+            border: grey solid 1px;
+            border-radius: 5px;
+            margin-top: 5px;
+            text-decoration: none;
+        }
+        
+        .activity[did=ads] ul a li img {
+            width: 100px;
+            position: relative;
+            top: 50px;
+            left: 25px;
+        }
+        
+        .activity[did=ads] ul a li .nl {
+            position: relative;
+            left: 155px;
+            top: -71px;
+        }
+        
+        .activity[did=ads] ul a li .nl p,
+        .activity[did=ads] ul a li .nl h2 {
+            color: #000;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="in">
+        <div class="activity" did="Load">
+            <div class="e">
+                <div class="load"></div>
+                <h2>正在开机</h2>
+            </div>
+        </div>
+        <div class="activity" did="wel1">
+            <div class="smalla-more">
+                <div class="smalla-eyes">
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="smalla-face">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="smalla-mout">
+                    <div></div>
+                </div>
+            </div>
+            <div class="fr">
+                <h1 class="text">
+                    <h1>欢迎使用小A </h1>
+                    <h1> 在使用前 </h1>
+                    <h1> 你需要设置信息</h1>
+                </h1>
+            </div>
+            <div><span class="bi bi-arrow-right next"></span></div>
+        </div>
+        <div class="activity" did="wel2">
+            <div class="set1">
+                <h2>屏幕模式：<input type="text" id="setpin" placeholder="请输入窄屏或宽屏" /></h2>
+            </div>
+            <div class="set2">
+                <h2>用户名：<input type="text" id="usern"></h2>
+            </div>
+            <div class="set3">
+                <h2>密码：<input type="password" id="passn"></h2>
+            </div>
+            <div class="set4">
+                <h2>激活码：<input type="text" id="starn" placeholder="激活码激活系统，未激活不使用"></h2>
+            </div>
+            <div><span class="bi bi-arrow-right next"></span></div>
+            <div><span class="bi bi-arrow-left last"></span></div>
+        </div>
+        <div class="activity" did="wel3">
+            <div class="smalla-more">
+                <div class="smalla-eyes">
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="smalla-face">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="smalla-mout">
+                    <div></div>
+                </div>
+            </div>
+            <h1>设置成功</h1>
+            <h1>开始体验吧</h1>
+            <div><span class="bi bi-arrow-right next"></span></div>
+            <div><span class="bi bi-arrow-left last"></span></div>
+        </div>
+        <div class="activity" did="sp">
+            <div class="smalla-more">
+                <div class="smalla-eyes">
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="smalla-face">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="smalla-mout">
+                    <div></div>
+                </div>
+            </div>
+            <span class="fj"></span>
+            <div class="time">
+                <h2>
+                    <span class="hh"></span>:
+                    <span class="mm"></span>
+                    <span class="ss" style="display: none;"></span>
+                </h2>
+                <h4>
+                    <span class="yyyy"></span>-
+                    <span class="mr"></span>-
+                    <span class="dd"></span>
+                </h4>
+            </div>
+            <div class="gops">
+                <span class="fa fa-lock"></span>
+                <div class="dx"></div>
+            </div>
+        </div>
+        <div class="activity" did="hsp">
+            <div class="db">
+                <div class="smalla-more">
+                    <div class="smalla-eyes">
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="smalla-face">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="smalla-mout">
+                        <div></div>
+                    </div>
+                </div>
+                <span class="fj"></span>
+                <div class="time">
+                    <h2>
+                        <span class="hh"></span>:
+                        <span class="mm"></span>
+                        <span class="ss" style="display: none;"></span>
+                    </h2>
+                    <h4>
+                        <span class="yyyy"></span>-
+                        <span class="mr"></span>-
+                        <span class="dd"></span>
+                    </h4>
+                </div>
+            </div>
+            <div class="gops">
+                <span class="fa fa-lock"></span>
+                <div class="dx"></div>
+            </div>
+        </div>
+        <div class="activity" did="psp">
+            <div class="db">
+                <span class="bi bi-arrow-left"></span>
+                <div class="gops">
+                    <div class="dx"></div>
+                    <span class="fa fa-lock"></span>
+                </div>
+            </div>
+            <div class="js">
+                <p id="jsuser">账号错误</p>
+                <div class="sl">
+                    <input type="password" id="jspass" placeholder="请输入密码">
+                    <button id="jsgo"><i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="gj">
+                <button>忘记密码</button>
+            </div>
+        </div>
+        <div class="activity" did="hpsp">
+            <div class="db">
+                <span class="bi bi-arrow-left"></span>
+                <div class="gops">
+                    <div class="dx"></div>
+                    <span class="fa fa-lock"></span>
+                </div>
+            </div>
+            <div class="js">
+                <p id="hjsuser">账号错误</p>
+                <div class="sl">
+                    <input type="password" id="hjspass" placeholder="请输入密码">
+                    <button id="hjsgo"><i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="gj">
+                <button>忘记密码</button>
+            </div>
+        </div>
+        <div class="activity" did="bin">
+            <div class="smalla-more">
+                <div class="smalla-eyes">
+                    <div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="smalla-face">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="smalla-mout">
+                    <div></div>
+                </div>
+            </div>
+            <span class="fj"></span>
+            <div class="time">
+                <h2>
+                    <span class="hh"></span>:
+                    <span class="mm"></span>
+                    <span class="ss" style="display: none;"></span>
+                </h2>
+                <h4>
+                    <span class="yyyy"></span>-
+                    <span class="mr"></span>-
+                    <span class="dd"></span>
+                </h4>
+            </div>
+            <div class="yy">
+                <ul>
+                    <li class="toyy">
+                        <p class="fa fa-android" style="color: rgb(20, 151, 15);"></p>
+                        <p>应用</p>
+                    </li>
+                    <li class="tose">
+                        <p class="fa fa-gear" style="color: rgb(100, 100, 100);"></p>
+                        <p>设置</p>
+                    </li>
+                    <li class="tobz">
+                        <p class="fa fa-question-circle" style="color: rgb(62, 123, 255);"></p>
+                        <p>帮助</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="togr">
+                        <p class="fa fa-user-circle-o" style="color: rgb(78, 78, 78);"></p>
+                        <p>个人</p>
+                    </li>
+                    <li class="tokp">
+                        <p class="bi bi-arrows-angle-expand" style="transform: rotate(45deg);"></p>
+                        <p>宽屏</p>
+                    </li>
+                    <li class="toad">
+                        <p class="bi bi-badge-ad" style="color: rgb(255, 52, 52);"></p>
+                        <p>推广</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="cd">
+                <p>海内存知己，天涯若比邻。</p>
+                <span class="bi bi-power"></span>
+            </div>
+        </div>
+        <div class="activity" did="hbin">
+            <div class="db">
+                <div class="smalla-more">
+                    <div class="smalla-eyes">
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="smalla-face">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="smalla-mout">
+                        <div></div>
+                    </div>
+                </div>
+                <span class="fj"></span>
+                <div class="time">
+                    <h2>
+                        <span class="hh"></span>:
+                        <span class="mm"></span>
+                        <span class="ss" style="display: none;"></span>
+                    </h2>
+                    <h4>
+                        <span class="yyyy"></span>-
+                        <span class="mr"></span>-
+                        <span class="dd"></span>
+                    </h4>
+                </div>
+            </div>
+            <div class="yy">
+                <ul>
+                    <li class="toyy">
+                        <p class="fa fa-android" style="color: rgb(20, 151, 15);"></p>
+                        <p>应用</p>
+                    </li>
+                    <li class="tose">
+                        <p class="fa fa-gear" style="color: rgb(100, 100, 100);"></p>
+                        <p>设置</p>
+                    </li>
+                    <li class="tobz">
+                        <p class="fa fa-question-circle" style="color: rgb(62, 123, 255);"></p>
+                        <p>帮助</p>
+                    </li>
+                    <li class="togr">
+                        <p class="fa fa-user-circle-o" style="color: rgb(78, 78, 78);"></p>
+                        <p>个人</p>
+                    </li>
+                    <li class="tozp">
+                        <p class="bi bi-arrows-angle-contract" style="transform: rotate(45deg);"></p>
+                        <p>窄屏</p>
+                    </li>
+                    <li class="toad">
+                        <p class="bi bi-badge-ad" style="color: rgb(255, 52, 52);"></p>
+                        <p>推广</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="cd">
+                <p>海内存知己，天涯若比邻。</p>
+                <span class="bi bi-power"></span>
+            </div>
+        </div>
+        <div class="activity" did="yys">yys</div>
+        <div class="activity" did="ses">ses</div>
+        <div class="activity" did="bzs">bzs</div>
+        <div class="activity" did="grs">grs</div>
+        <div class="activity" did="ads">
+            <div class="hd">
+                <span class="bi bi-arrow-left"></span>
+                <span>小A推广</span>
+                <span class="bi bi-badge-ad" style="color: rgb(255, 52, 52);"></span>
+            </div>
+            <ul>
+                <a href="https://code.visualstudio.com/">
+                    <li>
+                        <img src="https://bkimg.cdn.bcebos.com/pic/d0c8a786c9177f3e6709e28308842cc79f3df9dcf8a0?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg" alt="VS Code" />
+                        <div class="nl">
+                            <h2>VS Code</h2>
+                            <p>学习HTML找不到好的编辑器？那就用VSCode吧！VSCode是一个著名的代码编辑器，有很多开发者都是用它。它有许多功能，比如代码提示，高亮，屏幕主题······里面还支持插件，丰富体验，点击了解详情</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="http://island.xiaoice.com">
+                    <li>
+                        <img src="https://xiaoicemedia.blob.core.chinacloudapi.cn/image/XiaoiceUX/assets/XiaoiceIsland/AppDownload/header_v2.png" alt="小冰岛">
+                        <div class="nl">
+                            <h2>小冰岛</h2>
+                            <p>许多应用都不能使我陶醉，但小冰岛却深深吸引了我（该广giao是手机端应用），它现在是预览版，可能会崩溃。此处卖个关子，你先安装体验，我相信你会喜欢的，我敢保证不是$$@%$软件，点击了解详情</p>
+                        </div>
+                    </li>
+                </a>
+                <a href="javascript:void(0);">
+                    <li>
+                        <h1>广告位招租</h1>
+                    </li>
+                </a>
+                <a href="javascript:void(0);">
+                    <li>
+                        <h1>广告位招租</h1>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="activity" did="hyys">hyys</div>
+        <div class="activity" did="hses">hses</div>
+        <div class="activity" did="hbzs">hbzs</div>
+        <div class="activity" did="hgrs">hgrs</div>
+        <div class="activity" did="hads">hads</div>
+    </div>
+</body>
+<script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js">
+</script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+<script src="https://www.layuicdn.com/layer-v3.5.1/layer.js"></script>
+<script>
+    starttime();
+
+    function starttime() {
+        var dt = new Date();
+        $(".hh").text(dt.getHours());
+        $(".mm").text(dt.getMinutes());
+        $(".ss").text(dt.getSeconds());
+        $(".yyyy").text(dt.getFullYear());
+        $(".mr").text(dt.getMonth() + 1);
+        $(".dd").text(dt.getDate());
+        setTimeout(() => {
+            starttime();
+        }, 1000);
+    }
+    $(document).ready(function() {
+        var zho = "1e368";
+        $("[did='Load']").hide();
+        $("[did='wel1']").show(400);
+        if (localStorage.saves == undefined || localStorage.saves == "1") {
+            localStorage.saves = "1";
+            localStorage.username = "";
+            localStorage.password = "";
+            localStorage.zp = "窄屏";
+            $("[did='wel1']").show(400);
+        } else {
+            $("[did='wel1']").hide();
+            $("[did='wel2']").hide();
+            $("[did='wel3']").hide();
+            if (localStorage.zp == "窄屏") {
+                $(".in").css("width", "400px");
+                $(".activity").css("width", "370px");
+                $("[did='sp']").show(400);
+                $("[did='hsp']").hide(400);
+            } else if (localStorage.zp == "宽屏") {
+                $(".in").css("width", "770px");
+                $(".activity").css("width", "730px");
+                $("[did='sp']").hide();
+                $("[did='hsp']").show(400);
+            }
+        }
+
+        $("[did='wel1'] .next").click(function() {
+            $("[did='wel1']").hide(400);
+            $("[did='wel2']").show(400);
+        });
+        $("[did='wel2'] .next").click(function() {
+            var user = $("#usern").val();
+            var pass = $("#passn").val();
+            var star = $("#starn").val();
+            if (user != "" && pass != "" && star == zho) {
+                if ($("#setpin").val() == "窄屏" || $("#setpin").val() == "宽屏") {
+                    localStorage.saves = "2";
+                    localStorage.username = user;
+                    localStorage.password = pass;
+                    localStorage.zp = $("#setpin").val();
+                    $("[did='wel2']").hide(400);
+                    $("[did='wel3']").show(400);
+                } else {
+                    layer.msg("验证失败");
+                }
+            } else {
+                layer.msg("验证失败");
+            }
+        });
+        $("[did='wel2'] .last").click(function() {
+            $("[did='wel2']").hide(400);
+            $("[did='wel1']").show(400);
+        });
+        $("[did='wel3'] .next").click(function() {
+            $("[did='wel1']").hide();
+            $("[did='wel2']").hide();
+            $("[did='wel3']").hide(400);
+            if (localStorage.zp == "窄屏") {
+                $(".in").css("width", "400px");
+                $(".activity").css("width", "370px");
+                $("[did='sp']").show(400);
+                $("[did='hsp']").hide(400);
+            } else if (localStorage.zp == "宽屏") {
+                $(".in").css("width", "770px");
+                $(".activity").css("width", "730px");
+                $("[did='sp']").hide(400);
+                $("[did='hsp']").show(400);
+            }
+        });
+        $("[did='wel3'] .last").click(function() {
+            $("[did='wel3']").hide(400);
+            $("[did='wel2']").show(400);
+        });
+        $("[did='sp'] .gops").click(function() {
+            $("[did='sp']").hide(400);
+            $("[did='hsp']").hide();
+            $("[did='psp']").show(400);
+            $("#jsuser").text(localStorage.username);
+        });
+        $("[did='hsp'] .gops").click(function() {
+            $("[did='sp']").hide();
+            $("[did='hsp']").hide(400);
+            $("[did='psp']").hide();
+            $("[did='hpsp']").show(400);
+            $("#hjsuser").text(localStorage.username);
+        });
+        $("[did='psp'] .db>span").click(function() {
+            $("[did='sp']").show(400);
+            $("[did='psp']").hide(400);
+        });
+        $("[did='psp'] #jsgo").click(function() {
+            if ($("#jspass").val() == localStorage.password) {
+                $("[did='psp']").hide(400);
+                $("[did='hpsp']").hide();
+                $("[did='bin']").show(400);
+                document.getElementById("jspass").value = "";
+            } else {
+                layer.msg("密码错误");
+            }
+        });
+        $("[did='psp'] .gj>button").click(function() {
+            layer.open({
+                title: "忘记密码向导",
+                content: "&nbsp;&nbsp;&nbsp;&nbsp;你忘记了密码，必须通过清除数据的方式<br>登录，确定清除数据？",
+                btn: ["取消", "确定"],
+                yes: function(index, layero) {
+                    layer.msg("你仔细想想，或许就想起来了。");
+                },
+                btn2: function(index, layero) {
+                    localStorage.saves = "1";
+                    layer.msg("已清除，请手动刷新。");
+                    setTimeout(function() {
+                        window.location.href = "#";
+                    }, 1500);
+                }
+            });
+        });
+        $("[did='hpsp'] .db>span").click(function() {
+            $("[did='hsp']").show(400);
+            $("[did='hpsp']").hide(400);
+        });
+        $("[did='hpsp'] #hjsgo").click(function() {
+            if ($("#hjspass").val() == localStorage.password) {
+                $("[did='psp']").hide();
+                $("[did='hpsp']").hide(400);
+                $("[did='bin']").hide();
+                $("[did='hbin']").show(400);
+                document.getElementById("hjspass").value = "";
+            } else {
+                layer.msg("密码错误");
+            }
+        });
+        $("[did='hpsp'] .gj>button").click(function() {
+            layer.open({
+                title: "忘记密码向导",
+                content: "&nbsp;&nbsp;&nbsp;&nbsp;你忘记了密码，必须通过清除数据的方式<br>登录，确定清除数据？",
+                btn: ["取消", "确定"],
+                yes: function(index, layero) {
+                    layer.msg("你仔细想想，或许就想起来了。");
+                },
+                btn2: function(index, layero) {
+                    localStorage.saves = "1";
+                    layer.msg("已清除，请手动刷新。");
+                    setTimeout(function() {
+                        window.location.href = "#";
+                    }, 1500);
+                }
+            });
+        });
+        $("[did='bin'] .cd span").click(function() {
+            $("[did='sp']").show(400);
+            $("[did='bin']").hide(400);
+        });
+        $("[did='hbin'] .cd span").click(function() {
+            $("[did='hsp']").show(400);
+            $("[did='hbin']").hide(400);
+        });
+        $("[did='bin'] .toyy").click(function() {
+            $("[did='bin']").hide(400);
+            $("[did='hbin']").hide();
+            $("[did='bzs']").hide();
+            $("[did='ses']").hide();
+            $("[did='grs']").hide();
+            $("[did='ads']").hide();
+            $("[did='hyys']").hide();
+            $("[did='hses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='hads']").hide();
+            $("[did='yys']").show(400);
+        });
+        $("[did='bin'] .tose").click(function() {
+            $("[did='bin']").hide(400);
+            $("[did='hbin']").hide();
+            $("[did='bzs']").hide();
+            $("[did='yys']").hide();
+            $("[did='grs']").hide();
+            $("[did='ads']").hide();
+            $("[did='hyys']").hide();
+            $("[did='hses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='hads']").hide();
+            $("[did='ses']").show(400);
+        });
+        $("[did='bin'] .tobz").click(function() {
+            $("[did='bin']").hide(400);
+            $("[did='hbin']").hide();
+            $("[did='yys']").hide();
+            $("[did='ses']").hide();
+            $("[did='grs']").hide();
+            $("[did='ads']").hide();
+            $("[did='hyys']").hide();
+            $("[did='hses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='hads']").hide();
+            $("[did='bzs']").show(400);
+        });
+        $("[did='bin'] .togr").click(function() {
+            $("[did='bin']").hide(400);
+            $("[did='hbin']").hide();
+            $("[did='bzs']").hide();
+            $("[did='ses']").hide();
+            $("[did='yys']").hide();
+            $("[did='ads']").hide();
+            $("[did='hyys']").hide();
+            $("[did='hses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='hads']").hide();
+            $("[did='grs']").show(400);
+        });
+        $("[did='bin'] .toad").click(function() {
+            $("[did='bin']").hide(400);
+            $("[did='hbin']").hide();
+            $("[did='bzs']").hide();
+            $("[did='ses']").hide();
+            $("[did='grs']").hide();
+            $("[did='yys']").hide();
+            $("[did='hyys']").hide();
+            $("[did='hses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='hads']").hide();
+            $("[did='ads']").show(400);
+        });
+        $("[did='hbin'] .toyy").click(function() {
+            $("[did='bin']").hide();
+            $("[did='hbin']").hide(400);
+            $("[did='bzs']").hide();
+            $("[did='ses']").hide();
+            $("[did='grs']").hide();
+            $("[did='ads']").hide();
+            $("[did='yys']").hide();
+            $("[did='hses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='hads']").hide();
+            $("[did='hyys']").show(400);
+        });
+        $("[did='hbin'] .tose").click(function() {
+            $("[did='bin']").hide();
+            $("[did='hbin']").hide(400);
+            $("[did='bzs']").hide();
+            $("[did='yys']").hide();
+            $("[did='grs']").hide();
+            $("[did='ads']").hide();
+            $("[did='hyys']").hide();
+            $("[did='ses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='hads']").hide();
+            $("[did='hses']").show(400);
+        });
+        $("[did='hbin'] .tobz").click(function() {
+            $("[did='bin']").hide();
+            $("[did='hbin']").hide(400);
+            $("[did='yys']").hide();
+            $("[did='ses']").hide();
+            $("[did='grs']").hide();
+            $("[did='ads']").hide();
+            $("[did='hyys']").hide();
+            $("[did='hses']").hide();
+            $("[did='bzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='hads']").hide();
+            $("[did='hbzs']").show(400);
+        });
+        $("[did='hbin'] .togr").click(function() {
+            $("[did='bin']").hide();
+            $("[did='hbin']").hide(400);
+            $("[did='bzs']").hide();
+            $("[did='ses']").hide();
+            $("[did='yys']").hide();
+            $("[did='ads']").hide();
+            $("[did='hyys']").hide();
+            $("[did='hses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='grs']").hide();
+            $("[did='hads']").hide();
+            $("[did='hgrs']").show(400);
+        });
+        $("[did='hbin'] .toad").click(function() {
+            $("[did='bin']").hide();
+            $("[did='hbin']").hide(400);
+            $("[did='bzs']").hide();
+            $("[did='ses']").hide();
+            $("[did='grs']").hide();
+            $("[did='yys']").hide();
+            $("[did='hyys']").hide();
+            $("[did='hses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='ads']").hide();
+            $("[did='hads']").show(400);
+        });
+        $("[did='hbin'] .tozp").click(function() {
+            $(".in").css("width", "400px");
+            $(".activity").css("width", "370px");
+            $("[did='hbin']").hide(400);
+            $("[did='bin']").show(400);
+        });
+        $("[did='bin'] .tokp").click(function() {
+            $(".in").css("width", "770px");
+            $(".activity").css("width", "730px");
+            $("[did='bin']").hide(400);
+            $("[did='hbin']").show(400);
+        });
+    });
+</script>
+
+</html>
