@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-icons.css">
+    <link rel="stylesheet" href="../../HTML插件/bootstrap/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <title>小A</title>
     <style>
@@ -686,6 +686,7 @@
             position: relative;
             top: 5;
             left: 5;
+            cursor: pointer;
         }
         
         .activity[did=ads] .hd span:nth-child(2) {
@@ -1067,14 +1068,14 @@
         <div class="activity" did="grs">grs</div>
         <div class="activity" did="ads">
             <div class="hd">
-                <span class="bi bi-arrow-left"></span>
+                <span class="bi bi-arrow-left tc"></span>
                 <span>小A推广</span>
                 <span class="bi bi-badge-ad" style="color: rgb(255, 52, 52);"></span>
             </div>
             <ul>
                 <a href="https://code.visualstudio.com/">
                     <li>
-                        <img src="https://bkimg.cdn.bcebos.com/pic/d0c8a786c9177f3e6709e28308842cc79f3df9dcf8a0?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg" alt="VS Code" />
+                        <img src="vscode.jpg" alt="VS Code" />
                         <div class="nl">
                             <h2>VS Code</h2>
                             <p>学习HTML找不到好的编辑器？那就用VSCode吧！VSCode是一个著名的代码编辑器，有很多开发者都是用它。它有许多功能，比如代码提示，高亮，屏幕主题······里面还支持插件，丰富体验，点击了解详情</p>
@@ -1083,7 +1084,7 @@
                 </a>
                 <a href="http://island.xiaoice.com">
                     <li>
-                        <img src="https://xiaoicemedia.blob.core.chinacloudapi.cn/image/XiaoiceUX/assets/XiaoiceIsland/AppDownload/header_v2.png" alt="小冰岛">
+                        <img src="xbisland.jpeg" alt="小冰岛">
                         <div class="nl">
                             <h2>小冰岛</h2>
                             <p>许多应用都不能使我陶醉，但小冰岛却深深吸引了我（该广giao是手机端应用），它现在是预览版，可能会崩溃。此处卖个关子，你先安装体验，我相信你会喜欢的，我敢保证不是$$@%$软件，点击了解详情</p>
@@ -1437,6 +1438,10 @@
             $(".activity").css("width", "730px");
             $("[did='bin']").hide(400);
             $("[did='hbin']").show(400);
+        });
+        $("[did='ads'] .hd .tc").click(function() {
+            $("[did='ads'").hide(400);
+            $("[did='bin']").show(400);
         });
     });
 </script>
