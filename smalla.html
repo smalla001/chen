@@ -1592,7 +1592,7 @@
             starttime();
         }, 1000);
     }
-    $(document).ready(function() {
+    window.onload=function() {
         var zho = "1e368";
         $("[did='Load']").hide();
         $("[did='wel1']").show(400);
@@ -1655,11 +1655,32 @@
                 $(".activity").css("width", "370px");
                 $("[did='sp']").show(400);
                 $("[did='hsp']").hide(400);
+                $("[did='bzs']").hide();
+            $("[did='ses']").hide();
+            $("[did='grs']").hide();
+            $("[did='ads']").hide();
+            $("[did='yys']").hide();
+            $("[did='hyys']").hide();
+            $("[did='hses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='hads']").hide();
+                
             } else if (localStorage.zp == "宽屏") {
                 $(".in").css("width", "770px");
                 $(".activity").css("width", "730px");
                 $("[did='sp']").hide(400);
                 $("[did='hsp']").show(400);
+                $("[did='bzs']").hide();
+            $("[did='ses']").hide();
+            $("[did='grs']").hide();
+            $("[did='ads']").hide();
+            $("[did='yys']").hide();
+            $("[did='hyys']").hide();
+            $("[did='hses']").hide();
+            $("[did='hbzs']").hide();
+            $("[did='hgrs']").hide();
+            $("[did='hads']").hide();
             }
         });
         $("[did='wel3'] .last").click(function() {
@@ -1962,7 +1983,7 @@
             $("[did='hbzs'").hide(400);
             $("[did='hbin']").show(400);
         });
-    });
+    }
 </script>
 
 </html>
