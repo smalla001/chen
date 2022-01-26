@@ -1,0 +1,1057 @@
+*,
+ ::after,
+ ::before {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+}
+
+.in {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+body {
+    background-color: royalblue;
+    height: 600px;
+}
+
+.activity {
+    position: relative;
+    left: 15px;
+    top: 15px;
+    margin-bottom: 15px;
+    width: 370px;
+    height: 570px;
+}
+
+.activity[did=Load] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load {
+    border: grey solid 20px;
+    border-top: cyan solid 20px;
+    animation: loadmove 1s infinite linear;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+@keyframes loadmove {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+.activity[did=Load] h2 {
+    font-size: 33px;
+}
+
+.smalla-eyes div:nth-child(1) {
+    width: 36%;
+    height: 80px;
+    border-radius: 25px;
+    float: left;
+    margin-left: 18%;
+}
+
+.smalla-eyes div:nth-child(2) {
+    width: 36%;
+    height: 80px;
+    border-radius: 25px;
+    float: left;
+    margin-left: 0;
+}
+
+.smalla-eyes div:nth-child(1) div {
+    animation: zeye 3s infinite linear;
+}
+
+.smalla-eyes div:nth-child(2) div {
+    animation: zeye 3s infinite linear;
+}
+
+.smalla-eyes div div {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.smalla-face {
+    clear: left;
+}
+
+.smalla-face div:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    background-color: orangered;
+    border-radius: 30px;
+    float: left;
+}
+
+.smalla-face div:nth-child(2) {
+    width: 10px;
+    height: 10px;
+    background-color: orangered;
+    border-radius: 30px;
+    float: right;
+}
+
+.smalla-mout {
+    border-radius: 50%;
+    border: transparent solid 5px;
+    border-bottom: #000 solid 5px;
+    border-left: #000 solid 5px;
+    transform: rotate(-45deg);
+    width: 35px;
+    height: 35px;
+    margin: 15px auto;
+}
+
+@keyframes zeye {
+    0%,
+    95% {
+        height: 80px;
+        margin-top: 0px;
+    }
+    97.5% {
+        height: 0px;
+        margin-top: 20px;
+    }
+}
+
+.smalla-more {
+    height: 140px;
+    width: 185px;
+    display: block;
+}
+
+@keyframes zeys {
+    0% {
+        margin-left: 18px;
+    }
+    50% {
+        margin-left: 22px;
+    }
+}
+
+.fr {
+    float: right;
+}
+
+.activity[did=wel1] .text {
+    margin-top: 100px;
+}
+
+.activity[did=wel1] .smalla-more {
+    padding-top: 50px;
+}
+
+.activity[did=wel1] {
+    overflow: hidden;
+    position: relative;
+}
+
+.next {
+    font-size: 50px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.last {
+    font-size: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.activity[did=wel2] .set1 h1,
+.activity[did=wel2] .set1 button {
+    display: inline-block;
+}
+
+.activity[did=wel3] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.activity[did=wel3] h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.activity[did=sp] .fj {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 0.5px;
+    background-color: #000;
+    left: 130px;
+    transform: rotate(-45deg);
+}
+
+.activity[did=sp] .smalla-more {
+    padding: 5px;
+}
+
+.activity[did=sp] .time {
+    float: right;
+    margin-right: 20px;
+}
+
+.activity[did=sp] .gops {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 360px;
+    cursor: pointer;
+}
+
+.activity[did=sp] {
+    position: relative;
+    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-size: 400px;
+    background-position: center;
+}
+
+.activity[did=sp] .gops span {
+    font-size: 30px;
+    display: block;
+    width: 360px;
+    text-align: center;
+}
+
+.activity[did=sp] .gops .dx {
+    width: 250px;
+    height: 0.5px;
+    background-color: #000;
+    margin-left: 55px;
+    margin-bottom: 10px;
+}
+
+.activity[did=hsp] .db {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 50px;
+}
+
+.activity[did=hsp] .fj {
+    display: block;
+    width: 0.5px;
+    height: 100px;
+    background-color: #000;
+    position: relative;
+    top: 20px;
+}
+
+.activity[did=hsp] .time {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.activity[did=hbin] .db {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 50px;
+}
+
+.activity[did=hbin] .fj {
+    display: block;
+    width: 0.5px;
+    height: 100px;
+    background-color: #000;
+    position: relative;
+    top: 20px;
+}
+
+.activity[did=hbin] .time {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.activity[did=hsp] .gops {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 730px;
+    cursor: pointer;
+}
+
+.activity[did=hsp] {
+    position: relative;
+    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-size: 800px;
+    background-position: center;
+}
+
+.activity[did=hbin] {
+    position: relative;
+    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-size: 800px;
+    background-position: center;
+}
+
+.activity[did=hsp] .gops span {
+    font-size: 30px;
+    width: 730px;
+    text-align: center;
+}
+
+.activity[did=hsp] .gops .dx {
+    width: 500px;
+    height: 0.5px;
+    background-color: #000;
+    margin-left: 110px;
+    margin-bottom: 10px;
+}
+
+.activity[did=psp] {
+    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-size: 400px;
+    background-position: center;
+}
+
+.activity[did=psp] .db {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.activity[did=psp] .db>span {
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.activity[did=psp] .db .gops span {
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.activity[did=psp] .db .gops {
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    top: -10px;
+}
+
+.activity[did=psp] .db .gops div {
+    width: 300px;
+    height: 0.5px;
+    background-color: #000;
+    position: relative;
+    top: 40px;
+}
+
+.activity[did=psp] .js {
+    width: 370px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.activity[did=psp] .js p {
+    font-size: 30px;
+}
+
+.activity[did=psp] .js .sl input,
+.activity[did=psp] .js .sl button {
+    outline: 0;
+    border: 0;
+    font-size: 20px;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.activity[did=psp] .js .sl {
+    padding-bottom: 7px;
+    border-radius: 40px;
+    border: #000 solid 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.activity[did=psp] .js .sl button {
+    cursor: pointer;
+    padding-top: 5px;
+    text-shadow: #000 0.5px 0.5px 1px;
+}
+
+.activity[did=psp] .gj button {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    color: blue;
+}
+
+.activity[did=psp] .gj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.activity[did=hpsp] {
+    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-size: 800px;
+    background-position: center;
+}
+
+.activity[did=hpsp] .db {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.activity[did=hpsp] .db>span {
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.activity[did=hpsp] .db .gops span {
+    display: block;
+    font-size: 30px;
+    width: 600px;
+    text-align: center;
+}
+
+.activity[did=hpsp] .db .gops {
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    top: -10px;
+    margin-left: 50px;
+}
+
+.activity[did=hpsp] .db .gops div {
+    width: 600px;
+    height: 0.5px;
+    background-color: #000;
+    position: relative;
+    top: 40px;
+}
+
+.activity[did=hpsp] .js {
+    width: 730px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.activity[did=hpsp] .js p {
+    font-size: 30px;
+}
+
+.activity[did=hpsp] .js .sl input,
+.activity[did=hpsp] .js .sl button {
+    outline: 0;
+    border: 0;
+    font-size: 20px;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.activity[did=hpsp] .js .sl {
+    padding-bottom: 7px;
+    border-radius: 40px;
+    border: #000 solid 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.activity[did=hpsp] .js .sl button {
+    cursor: pointer;
+    padding-top: 5px;
+    text-shadow: #000 0.5px 0.5px 1px;
+}
+
+.activity[did=hpsp] .gj button {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    color: blue;
+}
+
+.activity[did=hpsp] .gj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 730px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.activity[did=bin] .fj {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 0.5px;
+    background-color: #000;
+    left: 130px;
+    transform: rotate(-45deg);
+}
+
+.activity[did=bin] .smalla-more {
+    padding: 5px;
+    padding-top: 30px;
+}
+
+.activity[did=bin] .time {
+    float: right;
+    margin-right: 20px;
+}
+
+.activity[did=bin] {
+    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-size: 400px;
+    background-position: center;
+}
+
+li {
+    list-style: none;
+}
+
+.activity[did=bin] .yy {
+    position: relative;
+    top: 75px;
+}
+
+.activity[did=bin] .yy ul li p:nth-child(1) {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.activity[did=bin] .yy ul li p:nth-child(2) {
+    font-size: 16px;
+}
+
+.activity[did=bin] .yy ul {
+    display: flex;
+    justify-content: space-around;
+    width: 370px;
+    padding-left: 0;
+}
+
+.activity[did=bin] .yy ul li:hover {
+    cursor: pointer;
+    box-shadow: #333 0 0 0.5 1;
+}
+
+.activity[did=bin] .cd {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.activity[did=bin] .cd p {
+    font-size: 20px;
+    margin-bottom: 0;
+    font-family: '楷体';
+    font-weight: bold;
+    width: 370px;
+    text-align: center;
+}
+
+.activity[did=bin] .cd span {
+    font-size: 25px;
+    position: absolute;
+    bottom: 2px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.activity[did=hbin] .yy {
+    position: relative;
+    top: 175px;
+}
+
+.activity[did=hbin] .yy ul li p:nth-child(1) {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.activity[did=hbin] .yy ul li p:nth-child(2) {
+    font-size: 16px;
+}
+
+.activity[did=hbin] .yy ul {
+    display: flex;
+    justify-content: space-around;
+    width: 730px;
+    padding-left: 0;
+}
+
+.activity[did=hbin] .yy ul li:hover {
+    cursor: pointer;
+    box-shadow: #333 0 0 0.5 1;
+}
+
+.activity[did=hbin] .cd {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.activity[did=hbin] .cd p {
+    font-size: 20px;
+    margin-bottom: 0;
+    font-family: '楷体';
+    font-weight: bold;
+    width: 730px;
+    text-align: center;
+}
+
+.activity[did=hbin] .cd span {
+    font-size: 25px;
+    position: absolute;
+    bottom: 2px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.activity[did=ads] {
+    position: relative;
+}
+
+.activity[did=ads] ul::-webkit-scrollbar {
+    display: none;
+}
+
+.activity[did=ads] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=ads] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=ads] .hd span:nth-child(2) {
+    position: absolute;
+    left: 100px;
+    top: 5;
+}
+
+.activity[did=ads] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=ads] .hd {
+    width: 370px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=hads] {
+    position: relative;
+}
+
+.activity[did=hads] ul::-webkit-scrollbar {
+    display: none;
+}
+
+.activity[did=hads] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=hads] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=hads] .hd span:nth-child(2) {
+    position: absolute;
+    left: 250px;
+    top: 5;
+}
+
+.activity[did=hads] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=hads] .hd {
+    width: 730px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=hyys] {
+    position: relative;
+}
+
+.activity[did=hyys] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=hyys] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=hyys] .hd span:nth-child(2) {
+    position: absolute;
+    left: 250px;
+    top: 5;
+}
+
+.activity[did=hyys] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=hyys] .hd {
+    width: 730px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=hses] {
+    position: relative;
+}
+
+.activity[did=hses]::-webkit-scrollbar {
+    display: none;
+}
+
+.activity[did=hses] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=hses] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=hses] .hd span:nth-child(2) {
+    position: absolute;
+    left: 250px;
+    top: 5;
+}
+
+.activity[did=hses] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=hses] .hd {
+    width: 730px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=hgrs] {
+    position: relative;
+}
+
+.activity[did=hgrs] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=hgrs] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=hgrs] .hd span:nth-child(2) {
+    position: absolute;
+    left: 250px;
+    top: 5;
+}
+
+.activity[did=hgrs] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=hgrs] .hd {
+    width: 730px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=hbzs] {
+    position: relative;
+}
+
+.activity[did=hbzs] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=hbzs] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=hbzs] .hd span:nth-child(2) {
+    position: absolute;
+    left: 250px;
+    top: 5;
+}
+
+.activity[did=hbzs] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=hbzs] .hd {
+    width: 730px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=bzs] {
+    position: relative;
+}
+
+.activity[did=bzs] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=bzs] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=bzs] .hd span:nth-child(2) {
+    position: absolute;
+    left: 100px;
+    top: 5;
+}
+
+.activity[did=bzs] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=bzs] .hd {
+    width: 370px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=yys] {
+    position: relative;
+}
+
+.activity[did=yys] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=yys] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=yys] .hd span:nth-child(2) {
+    position: absolute;
+    left: 100px;
+    top: 5;
+}
+
+.activity[did=yys] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=yys] .hd {
+    width: 370px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=grs] {
+    position: relative;
+}
+
+.activity[did=grs] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=grs] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=grs] .hd span:nth-child(2) {
+    position: absolute;
+    left: 100px;
+    top: 5;
+}
+
+.activity[did=grs] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=grs] .hd {
+    width: 370px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=ses] {
+    position: relative;
+}
+
+.activity[did=ses] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=ses] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=ses] .hd span:nth-child(2) {
+    position: absolute;
+    left: 100px;
+    top: 5;
+}
+
+.activity[did=ses] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=ses] .hd {
+    width: 370px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=ads] ul {
+    padding-left: 0;
+    overflow-y: scroll;
+    width: 370px;
+    height: 520px;
+    overflow-x: hidden;
+}
+
+.activity[did=ads] ul a {
+    display: block;
+    width: 370px;
+    height: 300px;
+    border: grey solid 1px;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.activity[did=ads] ul a li img {
+    width: 100px;
+    position: relative;
+    top: 50px;
+    left: 25px;
+}
+
+.activity[did=ads] ul a li .nl {
+    position: relative;
+    left: 155px;
+    top: -71px;
+}
+
+.activity[did=ads] ul a li .nl p,
+.activity[did=ads] ul a li .nl h2 {
+    color: #000;
+    width: 200px;
+}
+
+.activity[did=hads] ul {
+    position: relative;
+    width: 730px;
+    height: 520px;
+    padding-left: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.activity[did=hads] ul a {
+    display: block;
+    width: 730px;
+    height: 400px;
+    border: grey solid 1px;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.activity[did=hads] ul a li img {
+    width: 200px;
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+
+.activity[did=hads] ul a li .nl {
+    position: relative;
+    left: 311px;
+    top: -142px;
+}
+
+.activity[did=hads] ul a li .nl p,
+.activity[did=hads] ul a li .nl h2 {
+    color: #000;
+    width: 400px;
+}
