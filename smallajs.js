@@ -21,6 +21,9 @@ window.onload = function() {
         localStorage.username = "";
         localStorage.password = "";
         localStorage.zp = "窄屏";
+        localStorage.tx = "admin.png";
+        localStorage.gxqm = "我是一个人";
+        localStorage.bz = "http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg";
         $("[did='wel1']").show(400);
     } else {
         $("[did='wel1']").hide();
@@ -31,11 +34,23 @@ window.onload = function() {
             $(".activity").css("width", "370px");
             $("[did='sp']").show(400);
             $("[did='hsp']").hide(400);
+            $("[did='sp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hsp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='psp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hpsp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='bin']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hbin']").css("background-image", "url(" + localStorage.bz + ")");
         } else if (localStorage.zp == "宽屏") {
             $(".in").css("width", "770px");
             $(".activity").css("width", "730px");
             $("[did='sp']").hide();
             $("[did='hsp']").show(400);
+            $("[did='sp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hsp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='psp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hpsp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='bin']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hbin']").css("background-image", "url(" + localStorage.bz + ")");
         }
     }
 
@@ -85,7 +100,12 @@ window.onload = function() {
             $("[did='hbzs']").hide();
             $("[did='hgrs']").hide();
             $("[did='hads']").hide();
-
+            $("[did='sp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hsp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='psp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hpsp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='bin']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hbin']").css("background-image", "url(" + localStorage.bz + ")");
         } else if (localStorage.zp == "宽屏") {
             $(".in").css("width", "770px");
             $(".activity").css("width", "730px");
@@ -101,6 +121,12 @@ window.onload = function() {
             $("[did='hbzs']").hide();
             $("[did='hgrs']").hide();
             $("[did='hads']").hide();
+            $("[did='sp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hsp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='psp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hpsp']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='bin']").css("background-image", "url(" + localStorage.bz + ")");
+            $("[did='hbin']").css("background-image", "url(" + localStorage.bz + ")");
         }
     });
     $("[did='wel3'] .last").click(function() {
@@ -246,6 +272,98 @@ window.onload = function() {
         $("[did='hgrs']").hide();
         $("[did='hads']").hide();
         $("[did='grs']").show(400);
+        $(".grsusername").text(localStorage.username);
+        $(".grsgxqm").text(localStorage.gxqm);
+        $(".grstx").attr("src", localStorage.tx);
+    });
+    $(".ggtx").click(function() {
+        layer.prompt({
+            title: "请输入头像路径"
+        }, function(val, index) {
+            layer.msg("更改成功");
+            localStorage.tx = val;
+            layer.close(index);
+            $(".grsusername").text(localStorage.username);
+            $(".grsgxqm").text(localStorage.gxqm);
+            $(".grstx").attr("src", localStorage.tx);
+        });
+    });
+    $(".ggyhm").click(function() {
+        layer.prompt({
+            title: "请输入新的用户名"
+        }, function(val, index) {
+            layer.msg("更改成功");
+            localStorage.username = val;
+            layer.close(index);
+            $(".grsusername").text(localStorage.username);
+            $(".grsgxqm").text(localStorage.gxqm);
+            $(".grstx").attr("src", localStorage.tx);
+        });
+    });
+    $(".ggbz").click(function() {
+        layer.prompt({
+            title: "请输入壁纸路径"
+        }, function(val, index) {
+            layer.msg("更改成功");
+            localStorage.bz = val;
+            layer.close(index);
+        });
+    });
+    $(".ggpin").click(function() {
+        layer.prompt({
+            title: "请输入宽屏或窄屏"
+        }, function(val, index) {
+            if (val == "宽屏" || val == "窄屏") {
+                layer.msg("更改成功");
+                localStorage.zp = val;
+                layer.close(index);
+            } else {
+                layer.msg("输入错误");
+            }
+        });
+    });
+    $(".ggmm").click(function() {
+        layer.prompt({
+            title: "请输入原密码"
+        }, function(val, index) {
+            if (val == localStorage.password) {
+                layer.prompt({
+                    title: "请输入新密码"
+                }, function(val, index) {
+                    layer.msg("更改成功");
+                    localStorage.password = val;
+                    layer.close(index);
+                });
+            } else {
+                layer.msg("密码不正确");
+            }
+            layer.close(index);
+        });
+    });
+    $(".gggxqm").click(function() {
+        layer.prompt({
+            title: "请输入你的个性签名"
+        }, function(val, index) {
+            layer.msg("更改成功");
+            localStorage.gxqm = val;
+            layer.close(index);
+            $("#grsusername").text(localStorage.username);
+            $("#grsgxqm").text(localStorage.gxqm);
+            $("#grstx").attr("src", localStorage.tx);
+        });
+    });
+    $(".remove").click(function() {
+        layer.prompt({
+            title: "你确定吗？请输入你的密码"
+        }, function(val, index) {
+            if (val == localStorage.password) {
+                layer.msg("已重置");
+                localStorage.saves = "1";
+                layer.close(index);
+            } else {
+                layer.msg("密码错误");
+            }
+        });
     });
     $("[did='bin'] .toad").click(function() {
         $("[did='bin']").hide(400);
@@ -316,6 +434,9 @@ window.onload = function() {
         $("[did='grs']").hide();
         $("[did='hads']").hide();
         $("[did='hgrs']").show(400);
+        $(".grsusername").text(localStorage.username);
+        $(".grsgxqm").text(localStorage.gxqm);
+        $(".grstx").attr("src", localStorage.tx);
     });
     $("[did='hbin'] .toad").click(function() {
         $("[did='bin']").hide();
