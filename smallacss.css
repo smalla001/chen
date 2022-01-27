@@ -226,7 +226,7 @@ body {
 
 .activity[did=sp] {
     position: relative;
-    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-image: url(back.jpeg);
     background-size: 400px;
     background-position: center;
 }
@@ -304,14 +304,14 @@ body {
 
 .activity[did=hsp] {
     position: relative;
-    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-image: url(back.jpeg);
     background-size: 800px;
     background-position: center;
 }
 
 .activity[did=hbin] {
     position: relative;
-    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-image: url(back.jpeg);
     background-size: 800px;
     background-position: center;
 }
@@ -331,7 +331,7 @@ body {
 }
 
 .activity[did=psp] {
-    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-image: url(back.jpeg);
     background-size: 400px;
     background-position: center;
 }
@@ -423,7 +423,7 @@ body {
 }
 
 .activity[did=hpsp] {
-    background-image: url(back.jpg);
+    background-image: url(back.jpeg);
     background-size: 800px;
     background-position: center;
 }
@@ -536,7 +536,7 @@ body {
 }
 
 .activity[did=bin] {
-    background-image: url(back.jpg);
+    background-image: url(back.jpeg);
     background-size: 400px;
     background-position: center;
 }
