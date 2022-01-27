@@ -23,7 +23,7 @@ window.onload = function() {
         localStorage.zp = "窄屏";
         localStorage.tx = "admin.png";
         localStorage.gxqm = "我是一个人";
-        localStorage.bz = "http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg";
+        localStorage.bz = "back.jpeg";
         $("[did='wel1']").show(400);
     } else {
         $("[did='wel1']").hide();
