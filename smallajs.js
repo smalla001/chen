@@ -347,9 +347,9 @@ window.onload = function() {
             layer.msg("更改成功");
             localStorage.gxqm = val;
             layer.close(index);
-            $("#grsusername").text(localStorage.username);
-            $("#grsgxqm").text(localStorage.gxqm);
-            $("#grstx").attr("src", localStorage.tx);
+            $(".grsusername").text(localStorage.username);
+            $(".grsgxqm").text(localStorage.gxqm);
+            $(".grstx").attr("src", localStorage.tx);
         });
     });
     $(".remove").click(function() {
