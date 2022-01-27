@@ -423,7 +423,7 @@ body {
 }
 
 .activity[did=hpsp] {
-    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-image: url(back.jpg);
     background-size: 800px;
     background-position: center;
 }
@@ -536,7 +536,7 @@ body {
 }
 
 .activity[did=bin] {
-    background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20200505/1bea8b31639441d5aa007a73e122338f.jpeg);
+    background-image: url(back.jpg);
     background-size: 400px;
     background-position: center;
 }
@@ -1054,4 +1054,212 @@ li {
 .activity[did=hads] ul a li .nl h2 {
     color: #000;
     width: 400px;
+}
+
+.activity[did=yys] ul {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 370px;
+    height: 500px;
+}
+
+.activity[did=yys] ul::-webkit-scrollbar {
+    display: none;
+}
+
+.activity[did=yys] ul li p {
+    margin: 0;
+}
+
+.activity[did=yys] ul li p:first-child {
+    font-size: 40px;
+}
+
+.activity[did=yys] ul li p:last-child {
+    font-size: 24px;
+}
+
+.activity[did=yys] ul li {
+    padding: 20px 37px;
+    float: left;
+    cursor: pointer;
+}
+
+.activity[did=hyys] ul {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 730px;
+    height: 500px;
+}
+
+.activity[did=hyys] ul::-webkit-scrollbar {
+    display: none;
+}
+
+.activity[did=hyys] ul li p {
+    margin: 0;
+}
+
+.activity[did=hyys] ul li p:first-child {
+    font-size: 40px;
+}
+
+.activity[did=hyys] ul li p:last-child {
+    font-size: 24px;
+}
+
+.activity[did=hyys] ul li {
+    padding: 20px 36px;
+    float: left;
+    cursor: pointer;
+}
+
+.activity[did=grs] .tx {
+    display: flex;
+    width: 370px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #333;
+}
+
+.activity[did=grs] .tx img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.activity[did=grs] .tx p.grsgxqm {
+    color: rgb(212, 212, 212);
+    font-size: smaller;
+    max-width: 250px;
+}
+
+.activity[did=grs] .tx .grsusername {
+    color: #fff;
+    font-size: x-large;
+    margin-bottom: 0;
+}
+
+.activity[did=grs] ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.activity[did=grs] ul li:hover {
+    background-color: wheat;
+    cursor: pointer;
+}
+
+.activity[did=grs] ul li::after {
+    content: ">";
+    float: right;
+}
+
+.activity[did=grs] ul li {
+    font-size: x-large;
+    padding: 10px;
+    border: grey solid 1px;
+}
+
+.activity[did=hgrs] .tx {
+    display: flex;
+    width: 730px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #333;
+}
+
+.activity[did=hgrs] .tx img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.activity[did=hgrs] .tx p.grsgxqm {
+    color: rgb(212, 212, 212);
+    font-size: smaller;
+    max-width: 250px;
+}
+
+.activity[did=hgrs] .tx .grsusername {
+    color: #fff;
+    font-size: x-large;
+    margin-bottom: 0;
+}
+
+.activity[did=hgrs] ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.activity[did=hgrs] ul li:hover {
+    background-color: wheat;
+    cursor: pointer;
+}
+
+.activity[did=hgrs] ul li::after {
+    content: ">";
+    float: right;
+}
+
+.activity[did=hgrs] ul li {
+    font-size: x-large;
+    padding: 10px;
+    border: grey solid 1px;
+}
+
+.activity[did=ses] ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.activity[did=ses] ul li:hover {
+    background-color: wheat;
+    cursor: pointer;
+}
+
+.activity[did=ses] ul li::after {
+    content: ">";
+    float: right;
+}
+
+.activity[did=ses] ul li {
+    font-size: x-large;
+    padding: 10px;
+    border: grey solid 1px;
+}
+
+.activity[did=hses] ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.activity[did=hses] ul li:hover {
+    background-color: wheat;
+    cursor: pointer;
+}
+
+.activity[did=hses] ul li::after {
+    content: ">";
+    float: right;
+}
+
+.activity[did=hses] ul li {
+    font-size: x-large;
+    padding: 10px;
+    border: grey solid 1px;
 }
