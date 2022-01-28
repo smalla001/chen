@@ -917,6 +917,70 @@ li {
     z-index: 1;
 }
 
+.activity[did=app1] {
+    position: relative;
+}
+
+.activity[did=app1] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=app1] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=app1] .hd span:nth-child(2) {
+    position: absolute;
+    left: 100px;
+    top: 5;
+}
+
+.activity[did=app1] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=app1] .hd {
+    width: 370px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=happ1] {
+    position: relative;
+}
+
+.activity[did=happ1] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=happ1] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=happ1] .hd span:nth-child(2) {
+    position: absolute;
+    left: 200px;
+    top: 5;
+}
+
+.activity[did=happ1] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=happ1] .hd {
+    width: 730px;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
 .activity[did=grs] {
     position: relative;
 }
