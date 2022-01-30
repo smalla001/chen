@@ -31,31 +31,28 @@
             </div>
         </div>
         <div class="activity" did="wel1">
-            <div class="smalla-more">
-                <div class="smalla-eyes">
-                    <div>
+            <div class="page" pid="wel1_1">
+                <div class="smalla-more" style="margin: 0 auto;display: none;">
+                    <div class="smalla-eyes">
+                        <div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="smalla-face">
+                        <div></div>
                         <div></div>
                     </div>
-                    <div>
+                    <div class="smalla-mout">
                         <div></div>
                     </div>
                 </div>
-                <div class="smalla-face">
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="smalla-mout">
-                    <div></div>
-                </div>
+                <h2 class="title">小A  1</h2>
+                <p class="greystr"> 高 级 仿 真 系 统 </p>
+                <div><span class="bi bi-arrow-right next"></span></div>
             </div>
-            <div class="fr">
-                <h1 class="text">
-                    <h1>欢迎使用小A </h1>
-                    <h1> 在使用前 </h1>
-                    <h1> 你需要设置信息</h1>
-                </h1>
-            </div>
-            <div><span class="bi bi-arrow-right next"></span></div>
         </div>
         <div class="activity" did="wel2">
             <div class="set1">
@@ -351,7 +348,10 @@
                     <p class="bi bi-journal-bookmark-fill"></p>
                     <p>记事本</p>
                 </li>
-
+                <li class="toapp2">
+                    <p class="bi bi-music-note-beamed"></p>
+                    <p>音乐</p>
+                </li>
             </ul>
         </div>
         <div class="activity" did="ses">
@@ -366,7 +366,9 @@
                 <li class="ggmy">设置底部名言</li>
                 <li class="gyour">关于我们</li>
                 <li class="gxdata">更新日志</li>
+                <li class="dcr">导出数据</li>
                 <li class="remove" style="background-color: red;color: white;">恢复出厂设置</li>
+                <li class="drc" style="background-color: red;color: white;" title="非开发者不得设置，否则会造成系统出错">导入数据<b>（高级）</b></li>
             </ul>
         </div>
         <div class="activity" did="bzs">
@@ -376,7 +378,6 @@
                 <span class="fa fa-question-circle" style="color: rgb(62, 123, 255);"></span>
             </div>
             <h2>开发版，暂不提供帮助</h2>
-            <audio src="A Little Story.mp3" controls/>
         </div>
         <div class="activity" did="grs">
             <div class="hd">
@@ -444,6 +445,10 @@
                     <p class="bi bi-journal-bookmark-fill"></p>
                     <p>记事本</p>
                 </li>
+                <li class="toapp2">
+                    <p class="bi bi-music-note-beamed"></p>
+                    <p>音乐</p>
+                </li>
             </ul>
         </div>
         <div class="activity" did="hses">
@@ -458,7 +463,9 @@
                 <li class="ggmy">设置底部名言</li>
                 <li class="gyour">关于我们</li>
                 <li class="gxdata">更新日志</li>
+                <li class="dcr">导出数据</li>
                 <li class="remove" style="background-color: red;color: white;">恢复出厂设置</li>
+                <li class="drc" style="background-color: red;color: white;" title="非开发者不得设置，否则会造成系统出错">导入数据<b>（高级）</b></li>
             </ul>
         </div>
         <div class="activity" did="hbzs">
@@ -544,7 +551,34 @@
             <button style="position: absolute;bottom: 10px;right: 10px;" class="saveappatext">保存</button>
         </div>
         <div class="activity app" did="app2">
-
+            <div class="hd">
+                <span class="bi bi-arrow-left tc"></span>
+                <span>音乐</span>
+                <span class="bi bi-music-note-beamed"></span>
+            </div>
+            <input id="File" type="file" accept="audio/*"  />
+            <div class="togo">
+                <button>上传音乐</button>
+                <p id="dem"></p>
+            </div>
+            
+        <audio id="player"autoplay="autoplay" src="A Little Story.mp3" controls>
+        </audio>
+        </div>
+        <div class="activity app" did="happ2">
+            <div class="hd">
+                <span class="bi bi-arrow-left tc"></span>
+                <span>音乐</span>
+                <span class="bi bi-music-note-beamed"></span>
+            </div>
+            <input id="File" type="file" accept="audio/*"  />
+            <div class="togo">
+                <button>上传音乐</button>
+                <p id="dem"></p>
+            </div>
+            
+        <audio id="player"autoplay="autoplay" src="A Little Story.mp3" controls>
+        </audio>
         </div>
         <div class="activity app" did="app3">
 
