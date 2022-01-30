@@ -596,7 +596,7 @@ $("[did='happ2'] .hd .tc").click(function() {
     $("[did='happ2'").hide(400);
     $("[did='hyys']").show(400);
 });
-$("#File").change(function (file) {
+$(".File").change(function (file) {
     $("body").append(file.target.files[0]);
     var url = window.URL.createObjectURL(file.target.files[0]);
     $(".player")[0].src = url;
