@@ -599,14 +599,15 @@ $("[did='happ2'] .hd .tc").click(function() {
 $(".File").change(function (file) {
     $("body").append(file.target.files[0]);
     var url = window.URL.createObjectURL(file.target.files[0]);
-    $(".player")[0].src = url;
-    $(".player")[0].onload = function () {
+    $(".player").src = url;
+    $(".player").onload = function () {
         window.URL.revokeObjectURL(src);
     };
     var names=$(".File").val();
     var res=names.split("\\");
     $(".dem").html(res[res.length-1]);
-    $(".src .togo button").text("更改音乐");
+    $("[did='app2'] .togo button").text("更改音乐");
+    $("[did='happ2'] .togo button").text("更改音乐");
 });
 $("[did='yys'] .toapp1").click(function() {
     $("[did='app1'").show(400);
