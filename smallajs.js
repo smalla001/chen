@@ -17,7 +17,7 @@ var zho = "1e368";
 $("[did='Load']").hide();
 $(".app").hide();
 $("[did='wel1']").show(400);
-
+var app2flag;
 if (localStorage.saves == undefined || localStorage.saves == "1") {
     localStorage.saves = "1";
     localStorage.username = "";
@@ -590,24 +590,23 @@ $("[did='happ1'] .hd .tc").click(function() {
 });
 $("[did='app2'] .hd .tc").click(function() {
     $("[did='app2'").hide(400);
-    $("[did='yys']").show(400);
+    if (app2flag == 1) {
+        $("[did='yys']").show(400);
+    } else {
+        $("[did='hyys']").show(400);
+    }
 });
-$("[did='happ2'] .hd .tc").click(function() {
-    $("[did='happ2'").hide(400);
-    $("[did='hyys']").show(400);
-});
-$(".File").change(function (file) {
+$("#File").change(function(file) {
     $("body").append(file.target.files[0]);
     var url = window.URL.createObjectURL(file.target.files[0]);
-    $(".player").src = url;
-    $(".player").onload = function () {
+    $("#player")[0].src = url;
+    $("#player")[0].onload = function() {
         window.URL.revokeObjectURL(src);
     };
-    var names=$(".File").val();
-    var res=names.split("\\");
-    $(".dem").html(res[res.length-1]);
-    $("[did='app2'] .togo button").text("更改音乐");
-    $("[did='happ2'] .togo button").text("更改音乐");
+    var names = $("#File").val();
+    var res = names.split("\\");
+    $("#dem").html(res[res.length - 1]);
+    $(".src .togo button").text("更改音乐");
 });
 $("[did='yys'] .toapp1").click(function() {
     $("[did='app1'").show(400);
@@ -619,10 +618,12 @@ $("[did='hyys'] .toapp1").click(function() {
 });
 $("[did='yys'] .toapp2").click(function() {
     $("[did='app2'").show(400);
+    app2flag = 1;
     $("[did='yys']").hide(400);
 });
 $("[did='hyys'] .toapp2").click(function() {
-    $("[did='happ2'").show(400);
+    $("[did='app2'").show(400);
+    app2flag = 2;
     $("[did='hyys']").hide(400);
 });
 $("[did='grs'] .hd .tc").click(function() {
