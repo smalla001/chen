@@ -17,6 +17,7 @@ var zho = "1e368";
 $("[did='Load']").hide();
 $(".app").hide();
 $("[did='wel1']").show(400);
+
 if (localStorage.saves == undefined || localStorage.saves == "1") {
     localStorage.saves = "1";
     localStorage.username = "";
@@ -29,6 +30,9 @@ if (localStorage.saves == undefined || localStorage.saves == "1") {
     localStorage.appa = "欢迎使用记事本";
     localStorage.bbh = "0.74";
     $("[did='wel1']").show(400);
+    $(".activity[did='wel1'] .page[pid='wel1_1'] .smalla-more").fadeIn(1600);
+    $(".activity[did='wel1'] .title").fadeIn(1000);
+    $(".activity[did='wel1'] .greystr").fadeIn(1000);
 } else {
     $("[did='wel1']").hide();
     $("[did='wel2']").hide();
@@ -228,6 +232,45 @@ $("[did='hpsp'] .gj>button").click(function() {
         }
     });
 });
+$(".drc").click(function() {
+    layer.prompt({
+        title: "导入数据向导"
+    }, function(val, index) {
+        var dataobj = JSON.parse(val);
+        localStorage.saves = dataobj.saves;
+        localStorage.username = dataobj.username;
+        localStorage.password = dataobj.password;
+        localStorage.zp = dataobj.zp;
+        localStorage.tx = dataobj.tx;
+        localStorage.gxqm = dataobj.gxqm;
+        localStorage.bz = dataobj.bz;
+        localStorage.my = dataobj.my;
+        localStorage.appa = dataobj.appa;
+        localStorage.bbh = dataobj.bbh;
+        layer.msg("导入成功");
+    });
+});
+$(".dcr").click(function() {
+    layer.open({
+        title: "你的所有数据，请复制到你的记事本或便签保存",
+        content: "<p style='user-select: text;'>" + hqsj() + "</p>"
+    });
+});
+
+function hqsj() {
+    var datajson = '{"saves":"' + localStorage.saves +
+        '",<br>"username":"' + localStorage.username +
+        '",<br>"password":"' + localStorage.password +
+        '",<br>"zp":"' + localStorage.zp +
+        '",<br>"tx":"' + localStorage.tx +
+        '",<br>"gxqm":"' + localStorage.gxqm +
+        '",<br>"bz":"' + localStorage.bz +
+        '",<br>"my":"' + localStorage.my +
+        '",<br>"appa":"' + localStorage.appa +
+        '",<br>"bbh":"' + localStorage.bbh + '"}';
+    return datajson;
+
+}
 $("[did='bin'] .cd span").click(function() {
     $("[did='sp']").show(400);
     $("[did='bin']").hide(400);
@@ -545,12 +588,40 @@ $("[did='happ1'] .hd .tc").click(function() {
     $("[did='happ1'").hide(400);
     $("[did='hyys']").show(400);
 });
+$("[did='app2'] .hd .tc").click(function() {
+    $("[did='app2'").hide(400);
+    $("[did='yys']").show(400);
+});
+$("[did='happ2'] .hd .tc").click(function() {
+    $("[did='happ2'").hide(400);
+    $("[did='hyys']").show(400);
+});
+$("#File").change(function (file) {
+    $("body").append(file.target.files[0]);
+    var url = window.URL.createObjectURL(file.target.files[0]);
+    $("#player")[0].src = url;
+    $("#player")[0].onload = function () {
+        window.URL.revokeObjectURL(src);
+    };
+    var names=$("#File").val();
+    var res=names.split("\\");
+    $("#dem").html(res[res.length-1]);
+    $(".src .togo button").text("更改音乐");
+});
 $("[did='yys'] .toapp1").click(function() {
     $("[did='app1'").show(400);
     $("[did='yys']").hide(400);
 });
 $("[did='hyys'] .toapp1").click(function() {
     $("[did='happ1'").show(400);
+    $("[did='hyys']").hide(400);
+});
+$("[did='yys'] .toapp2").click(function() {
+    $("[did='app2'").show(400);
+    $("[did='yys']").hide(400);
+});
+$("[did='hyys'] .toapp2").click(function() {
+    $("[did='happ2'").show(400);
     $("[did='hyys']").hide(400);
 });
 $("[did='grs'] .hd .tc").click(function() {
