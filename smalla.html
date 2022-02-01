@@ -31,28 +31,28 @@
             </div>
         </div>
         <div class="activity" did="wel1">
-            <div class="page" pid="wel1_1">
-                <div class="smalla-more" style="margin: 0 auto;display: none;">
-                    <div class="smalla-eyes">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div>
-                            <div></div>
-                        </div>
-                    </div>
-                    <div class="smalla-face">
-                        <div></div>
+
+            <div class="smalla-more" style="margin: 0 auto;display: none;">
+                <div class="smalla-eyes">
+                    <div>
                         <div></div>
                     </div>
-                    <div class="smalla-mout">
+                    <div>
                         <div></div>
                     </div>
                 </div>
-                <h2 class="title">小A 1</h2>
-                <p class="greystr"> 高 级 仿 真 系 统 </p>
-                <div><span class="bi bi-arrow-right next"></span></div>
+                <div class="smalla-face">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="smalla-mout">
+                    <div></div>
+                </div>
             </div>
+            <h2 class="title">小A 1</h2>
+            <p class="greystr"> 高 级 仿 真 系 统 </p>
+            <div><span class="bi bi-arrow-right next"></span></div>
+
         </div>
         <div class="activity" did="wel2">
             <div class="set1">
@@ -385,17 +385,80 @@
                 <span>个人</span>
                 <span class="fa fa-user-circle-o" style="color: rgb(78, 78, 78);"></span>
             </div>
-            <div class="tx">
-                <img src="#" alt="头像" class="grstx">
-                <p class="grsusername">admin</p>
-                <p class="grsgxqm">welcome to smalla.</p>
+            <div class="page" pid="main">
+                <div class="tx">
+                    <img src="#" alt="头像" class="grstx">
+                    <p class="grsusername">admin</p>
+                    <p class="grsgxqm">welcome to smalla.</p>
+                </div>
+                <ul>
+                    <li class="ggtx">更改头像</li>
+                    <li class="ggyhm">更改用户名</li>
+                    <li class="ggmm">更改密码</li>
+                    <li class="gggxqm">个性签名</li>
+                </ul>
             </div>
-            <ul>
-                <li class="ggtx">更改头像</li>
-                <li class="ggyhm">更改用户名</li>
-                <li class="ggmm">更改密码</li>
-                <li class="gggxqm">个性签名</li>
-            </ul>
+            <div class="page" pid="ggtxpage">
+                <h3>更改头像向导</h3>
+                <div>
+                    <img class="grstx" src="myicon.png?retrun=notLoaded" alt="头像加载失败">
+                </div>
+                <h4>
+                    你原来的头像是：
+                    <span class="grstxname">notLoaded</span>
+                </h4>
+                <div>
+                    <button class="toggtxmr">使用默认头像库</button>
+                    <button class="toggtxbd">选择本地图片</button>
+                    <button class="toggtxwl">使用网络图片</button>
+                    <button class="ggtxcancl" style="background-color: white;">取消</button>
+                </div>
+            </div>
+            <div class="page" pid="ggtxmr">
+                <h3>选择一个头像</h3>
+                <ul>
+                    <li class="mrtx1">
+                        <img src="txfile/icon.jpg" alt="icon">
+                        <p>小人头像1</p>
+                    </li>
+                    <li class="mrtx2">
+                        <img src="txfile/admin.png" alt="admin">
+                        <p>小人头像2</p>
+                    </li>
+                    <li class="mrtx3">
+                        <img src="txfile/vscode.jpg" alt="vscode">
+                        <p>VS Code</p>
+                    </li>
+                    <li class="mrtx4">
+                        <img src="txfile/xbisland.jpeg" alt="xbisland">
+                        <p>小冰岛</p>
+                    </li>
+                </ul>
+                <div>
+                    <button class="ggtxmryes">更改</button>
+                    <button class="ggtxmrno">取消</button>
+                </div>
+            </div>
+            <div class="page" pid="ggtxbd">
+                <img class="ggtxbdyl" src="" alt="图片错误">
+                <input type="file" class="ggtxbdfile" accept="image/*" />
+                <button class="ggtxbdgo">上传图片</button>
+                <div>
+                    <button class="ggtxbdyes">更改</button>
+                    <button class="ggtxbdno">取消</button>
+                </div>
+            </div>
+            <div class="page" pid="ggtxwl">
+                <h3>请输入图片网址</h3>
+                <textarea class="ggtxwlurl"></textarea>
+                <div>
+                    <button class="ggtxwlyes">更改</button>
+                    <button class="ggtxwlno">取消</button>
+                </div>
+            </div>
+            <div class="page" pid="ggyhmpage"></div>
+            <div class="page" pid="ggmmpage"></div>
+            <div class="page" pid="gggxqmpage"></div>
         </div>
         <div class="activity" did="ads">
             <div class="hd">
@@ -406,7 +469,7 @@
             <ul>
                 <a href="https://code.visualstudio.com/" target="_blank">
                     <li>
-                        <img src="vscode.jpg" alt="VS Code" />
+                        <img src="txfile/vscode.jpg" alt="VS Code" />
                         <div class="nl">
                             <h2>VS Code</h2>
                             <p>学习HTML找不到好的编辑器？那就用VSCode吧！VSCode是一个著名的代码编辑器，有很多开发者都是用它。它有许多功能，比如代码提示，高亮，屏幕主题······里面还支持插件，丰富体验，点击了解详情</p>
@@ -415,7 +478,7 @@
                 </a>
                 <a href="http://island.xiaoice.com" target="_blank">
                     <li>
-                        <img src="xbisland.jpeg" alt="小冰岛">
+                        <img src="txfile/xbisland.jpeg" alt="小冰岛">
                         <div class="nl">
                             <h2>小冰岛</h2>
                             <p>许多应用都不能使我陶醉，但小冰岛却深深吸引了我（该广giao是手机端应用），它现在是预览版，可能会崩溃。此处卖个关子，你先安装体验，我相信你会喜欢的，我敢保证不是$$@%$软件，点击了解详情</p>
@@ -477,24 +540,6 @@
             <h2>开发版，暂不提供帮助</h2>
             <audio src="A Little Story.mp3" controls/>
         </div>
-        <div class="activity" did="hgrs">
-            <div class="hd">
-                <span class="bi bi-arrow-left tc"></span>
-                <span>个人</span>
-                <span class="fa fa-user-circle-o" style="color: rgb(78, 78, 78);"></span>
-            </div>
-            <div class="tx">
-                <img src="#" alt="头像" class="grstx">
-                <p class="grsusername">admin</p>
-                <p class="grsgxqm">welcome to smalla.</p>
-            </div>
-            <ul>
-                <li class="ggtx">更改头像</li>
-                <li class="ggyhm">更改用户名</li>
-                <li class="ggmm">更改密码</li>
-                <li class="gggxqm">个性签名</li>
-            </ul>
-        </div>
         <div class="activity" did="hads">
             <div class="hd">
                 <span class="bi bi-arrow-left tc"></span>
@@ -504,7 +549,7 @@
             <ul>
                 <a href="https://code.visualstudio.com/" target="_blank">
                     <li>
-                        <img src="vscode.jpg" alt="VS Code" />
+                        <img src="txfile/vscode.jpg" alt="VS Code" />
                         <div class="nl">
                             <h2>VS Code</h2>
                             <p>学习HTML找不到好的编辑器？那就用VSCode吧！VSCode是一个著名的代码编辑器，有很多开发者都是用它。它有许多功能，比如代码提示，高亮，屏幕主题······里面还支持插件，丰富体验，点击了解详情</p>
@@ -513,7 +558,7 @@
                 </a>
                 <a href="http://island.xiaoice.com" target="_blank">
                     <li>
-                        <img src="xbisland.jpeg" alt="小冰岛">
+                        <img src="txfile/xbisland.jpeg" alt="小冰岛">
                         <div class="nl">
                             <h2>小冰岛</h2>
                             <p>许多应用都不能使我陶醉，但小冰岛却深深吸引了我（该广giao是手机端应用），它现在是预览版，可能会崩溃。此处卖个关子，你先安装体验，我相信你会喜欢的，我敢保证不是$$@%$软件，点击了解详情</p>
