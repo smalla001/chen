@@ -18,12 +18,13 @@ $("[did='Load']").hide();
 $(".app").hide();
 $("[did='wel1']").show(400);
 var app2flag;
+var grsflag;
 if (localStorage.saves == undefined || localStorage.saves == "1") {
     localStorage.saves = "1";
     localStorage.username = "";
     localStorage.password = "";
     localStorage.zp = "窄屏";
-    localStorage.tx = "admin.png";
+    localStorage.tx = "txfile/admin.png";
     localStorage.gxqm = "我是一个人";
     localStorage.bz = "back.jpeg";
     localStorage.my = "海内存知己，天涯若比邻。";
@@ -257,6 +258,7 @@ $(".dcr").click(function() {
     });
 });
 
+
 function hqsj() {
     var datajson = '{"saves":"' + localStorage.saves +
         '",<br>"username":"' + localStorage.username +
@@ -331,24 +333,157 @@ $("[did='bin'] .togr").click(function() {
     $("[did='hyys']").hide();
     $("[did='hses']").hide();
     $("[did='hbzs']").hide();
-    $("[did='hgrs']").hide();
     $("[did='hads']").hide();
     $("[did='grs']").show(400);
     $(".grsusername").text(localStorage.username);
     $(".grsgxqm").text(localStorage.gxqm);
     $(".grstx").attr("src", localStorage.tx);
+    grsflag = 1;
 });
-$(".ggtx").click(function() {
-    layer.prompt({
-        title: "请输入头像路径"
-    }, function(val, index) {
-        layer.msg("更改成功");
-        localStorage.tx = val;
-        layer.close(index);
-        $(".grsusername").text(localStorage.username);
-        $(".grsgxqm").text(localStorage.gxqm);
-        $(".grstx").attr("src", localStorage.tx);
-    });
+// $(".ggtx").click(function() {
+//     layer.prompt({
+//         title: "请输入头像路径"
+//     }, function(val, index) {
+//         layer.msg("更改成功");
+//         localStorage.tx = val;
+//         layer.close(index);
+//         $(".grsusername").text(localStorage.username);
+//         $(".grsgxqm").text(localStorage.gxqm);
+//         $(".grstx").attr("src", localStorage.tx);
+//     });
+// });
+$("[did='grs'] .page").hide();
+$("[did='grs'] [pid='main']").show();
+$("[did='grs'] .ggtx").click(function() {
+    $("[did='grs'] [pid='main']").hide(400);
+    $("[did='grs'] [pid='ggtxpage']").show(400);
+});
+$("[did='grs'] .toggtxmr").click(function() {
+    $("[did='grs'] [pid='ggtxpage']").hide(400);
+    $("[did='grs'] [pid='ggtxmr']").show(400);
+});
+$("[did='grs'] .toggtxbd").click(function() {
+    $("[did='grs'] [pid='ggtxpage']").hide(400);
+    $("[did='grs'] [pid='ggtxbd']").show(400);
+});
+$("[did='grs'] .toggtxwl").click(function() {
+    $("[did='grs'] [pid='ggtxpage']").hide(400);
+    $("[did='grs'] [pid='ggtxwl']").show(400);
+});
+$("[did='grs'] .ggtxcancl").click(function() {
+    $("[did='grs'] [pid='main']").show(400);
+    $("[did='grs'] [pid='ggtxpage']").hide(400);
+});
+var mrtxcheck1 = 0;
+var mrtxcheck2 = 0;
+var mrtxcheck3 = 0;
+var mrtxcheck4 = 0;
+$(".mrtx1").click(function() {
+    mrtxcheck1 = 1;
+    mrtxcheck2 = 0;
+    mrtxcheck3 = 0;
+    mrtxcheck4 = 0;
+    $(".mrtx1").css("border", "cyan solid 1px");
+    $(".mrtx2").css("border", "0");
+    $(".mrtx3").css("border", "0");
+    $(".mrtx4").css("border", "0");
+});
+$(".mrtx2").click(function() {
+    mrtxcheck1 = 0;
+    mrtxcheck2 = 1;
+    mrtxcheck3 = 0;
+    mrtxcheck4 = 0;
+    $(".mrtx2").css("border", "cyan solid 1px");
+    $(".mrtx1").css("border", "0");
+    $(".mrtx3").css("border", "0");
+    $(".mrtx4").css("border", "0");
+});
+$(".mrtx3").click(function() {
+    mrtxcheck1 = 0;
+    mrtxcheck2 = 0;
+    mrtxcheck3 = 1;
+    mrtxcheck4 = 0;
+    $(".mrtx3").css("border", "cyan solid 1px");
+    $(".mrtx2").css("border", "0");
+    $(".mrtx1").css("border", "0");
+    $(".mrtx4").css("border", "0");
+});
+$(".mrtx4").click(function() {
+    mrtxcheck1 = 0;
+    mrtxcheck2 = 0;
+    mrtxcheck3 = 0;
+    mrtxcheck4 = 1;
+    $(".mrtx4").css("border", "cyan solid 1px");
+    $(".mrtx2").css("border", "0");
+    $(".mrtx3").css("border", "0");
+    $(".mrtx1").css("border", "0");
+});
+$(".ggtxmryes").click(function() {
+    var str = "";
+    if (mrtxcheck1 == 1) {
+        str = "txfile/icon.jpg";
+    } else if (mrtxcheck2 == 1) {
+        str = "txfile/admin.png";
+    } else if (mrtxcheck3 == 1) {
+        str = "txfile/vscode.jpg";
+    } else if (mrtxcheck4 == 1) {
+        str = "txfile/xbisland.jpeg";
+    }
+    localStorage.tx = str;
+    $(".grstx").attr("src", localStorage.tx);
+    $("[did='grs'] [pid='main']").show(400);
+    $("[did='grs'] [pid='ggtxpage']").hide();
+    $("[did='grs'] [pid='ggtxmr']").hide();
+    $("[did='grs'] [pid='ggtxbd']").hide();
+    $("[did='grs'] [pid='ggtxwl']").hide();
+    $(".grstxname").text(localStorage.tx);
+    layer.msg("更改成功");
+});
+$(".grstxname").text(localStorage.tx);
+$(".ggtxmrno").click(function() {
+    $("[did='grs'] [pid='ggtxpage']").show(400);
+    $("[did='grs'] [pid='ggtxmr']").hide(400);
+    $("[did='grs'] [pid='ggtxbd']").hide();
+    $("[did='grs'] [pid='ggtxwl']").hide();
+});
+$(".ggtxbdfile").change(function(file) {
+    var url = window.URL.createObjectURL(file.target.files[0]);
+    $(".ggtxbdyl").attr("src", url);
+    $(".ggtxbdyl").css("visibility", "visible");
+});
+$(".ggtxbdyes").click(function() {
+    localStorage.tx = $(".ggtxbdyl").attr("src");
+    $(".grstx").attr("src", localStorage.tx);
+    $("[did='grs'] [pid='main']").show(400);
+    $("[did='grs'] [pid='ggtxpage']").hide();
+    $("[did='grs'] [pid='ggtxmr']").hide();
+    $("[did='grs'] [pid='ggtxbd']").hide();
+    $("[did='grs'] [pid='ggtxwl']").hide();
+    $(".grstxname").text(localStorage.tx);
+    layer.msg("更改成功");
+});
+$(".ggtxbdno").click(function() {
+    $("[did='grs'] [pid='ggtxpage']").show(400);
+    $("[did='grs'] [pid='ggtxmr']").hide();
+    $("[did='grs'] [pid='ggtxbd']").hide(400);
+    $("[did='grs'] [pid='ggtxwl']").hide();
+});
+$(".ggtxwlno").click(function() {
+    $("[did='grs'] [pid='ggtxpage']").show(400);
+    $("[did='grs'] [pid='ggtxmr']").hide();
+    $("[did='grs'] [pid='ggtxbd']").hide();
+    $("[did='grs'] [pid='ggtxwl']").hide(400);
+});
+$(".ggtxwlyes").click(function() {
+    localStorage.tx = $(".ggtxwlurl").val();
+    $(".grstx").attr("src", localStorage.tx);
+    $("[did='grs'] [pid='main']").show(400);
+    $("[did='grs'] [pid='ggtxpage']").hide();
+    $("[did='grs'] [pid='ggtxmr']").hide();
+    $("[did='grs'] [pid='ggtxbd']").hide();
+    $("[did='grs'] [pid='ggtxwl']").hide();
+    $(".grstxname").text(localStorage.tx);
+    layer.msg("更改成功");
 });
 $(".ggyhm").click(function() {
     layer.prompt({
@@ -515,12 +650,12 @@ $("[did='hbin'] .togr").click(function() {
     $("[did='hyys']").hide();
     $("[did='hses']").hide();
     $("[did='hbzs']").hide();
-    $("[did='grs']").hide();
+    $("[did='grs']").show(400);
     $("[did='hads']").hide();
-    $("[did='hgrs']").show(400);
     $(".grsusername").text(localStorage.username);
     $(".grsgxqm").text(localStorage.gxqm);
     $(".grstx").attr("src", localStorage.tx);
+    grsflag = 2;
 });
 $("[did='hbin'] .toad").click(function() {
     $("[did='bin']").hide();
@@ -606,7 +741,7 @@ $("#File").change(function(file) {
     var names = $("#File").val();
     var res = names.split("\\");
     $("#dem").html(res[res.length - 1]);
-    $(".src .togo button").text("更改音乐");
+    $(".togo button").text("更改音乐");
 });
 $("[did='yys'] .toapp1").click(function() {
     $("[did='app1'").show(400);
@@ -628,7 +763,13 @@ $("[did='hyys'] .toapp2").click(function() {
 });
 $("[did='grs'] .hd .tc").click(function() {
     $("[did='grs'").hide(400);
-    $("[did='bin']").show(400);
+    if (grsflag == 1) {
+        $("[did='bin']").show(400);
+        $("[did='hbin']").hide();
+    } else {
+        $("[did='hbin']").show(400);
+        $("[did='bin']").hide();
+    }
 });
 $("[did='yys'] .hd .tc").click(function() {
     $("[did='yys'").hide(400);
@@ -640,10 +781,6 @@ $("[did='hads'] .hd .tc").click(function() {
 });
 $("[did='hyys'] .hd .tc").click(function() {
     $("[did='hyys'").hide(400);
-    $("[did='hbin']").show(400);
-});
-$("[did='hgrs'] .hd .tc").click(function() {
-    $("[did='hgrs'").hide(400);
     $("[did='hbin']").show(400);
 });
 $("[did='hses'] .hd .tc").click(function() {
