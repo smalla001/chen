@@ -30,6 +30,175 @@ body {
     height: 570px;
 }
 
+.page {
+    width: 100%;
+    height: 517px;
+}
+
+[pid=ggtxpage] div button,
+[pid=ggtxpage]>* {
+    width: 100%;
+}
+
+[pid=ggtxpage] h4 {
+    font-size: 12px;
+    font-weight: bolder;
+    height: 50px;
+}
+
+[pid=ggtxpage] div button {
+    background-color: cyan;
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: 5px;
+    border-radius: 40px;
+    border: black solid 1px;
+}
+
+[pid=ggtxpage] div button:hover {
+    background-color: #76E8FF;
+}
+
+[pid=ggtxpage] h4,
+[pid=ggtxpage] h3 {
+    text-align: center;
+    outline: 0;
+    border: 0;
+}
+
+[pid=ggtxpage] img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border-radius: 50px;
+    border: black solid 3px;
+}
+
+[pid=ggtxpage] h3 {
+    margin: 30px 0;
+}
+
+[pid=ggtxmr] h3 {
+    margin: 20px;
+}
+
+[pid=ggtxmr] ul {
+    margin: 0;
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 0;
+}
+
+[pid=ggtxmr] ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+[pid=ggtxmr] ul li img {
+    width: 75px;
+    height: 75px;
+}
+
+[pid=ggtxmr] div {
+    width: 100%;
+    height: 40px;
+}
+
+[pid=ggtxmr] div button:first-child {
+    float: left;
+    outline: 0;
+    border: 0;
+    width: 100px;
+    line-height: 40px;
+    background-color: cyan;
+    border: black solid 1px;
+    border-radius: 40px;
+}
+
+[pid=ggtxmr] div button:last-child {
+    float: right;
+    outline: 0;
+    border: 0;
+    width: 100px;
+    line-height: 40px;
+    background-color: cyan;
+    border: black solid 1px;
+    border-radius: 40px;
+}
+
+[pid=ggtxmr] div button:hover {
+    background-color: #9eeae6;
+}
+
+[pid=ggtxbd] img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+    margin: 50px auto;
+    border-radius: 150px;
+    visibility: hidden;
+}
+
+[pid=ggtxbd] input,
+[pid=ggtxbd] button {
+    font-size: 20px;
+    outline: 0;
+    border: 0;
+}
+
+[pid=ggtxbd]>button {
+    width: 100%;
+    position: relative;
+    top: -40px;
+    height: 40px;
+    pointer-events: none;
+    background-color: cyan;
+    border: black solid 1px;
+}
+
+[pid=ggtxbd] div button {
+    width: 49%;
+    background-color: cyan;
+    border: black solid 1px;
+    margin-top: 143px;
+}
+
+[pid=ggtxwl] h3 {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+[pid=ggtxwl] div button {
+    width: 49%;
+    height: 50px;
+    outline: 0;
+    border: black solid 1px;
+    background: cyan;
+    font-size: 24px;
+}
+
+[pid=ggtxwl] div {
+    width: 100%;
+    height: 50px;
+    margin-top: 60px;
+}
+
+[pid=ggtxwl] div button:hover {
+    background: #8cfffd;
+}
+
+[pid=ggtxwl] textarea {
+    width: 100%;
+    height: 300px;
+    border: cyan solid 2px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
 .activity[did=Load] {
     display: flex;
     align-items: center;
@@ -804,38 +973,6 @@ li {
     z-index: 1;
 }
 
-.activity[did=hgrs] {
-    position: relative;
-}
-
-.activity[did=hgrs] .hd span {
-    font-size: 35px;
-}
-
-.activity[did=hgrs] .hd span:nth-child(1) {
-    position: relative;
-    top: 5;
-    left: 5;
-    cursor: pointer;
-}
-
-.activity[did=hgrs] .hd span:nth-child(2) {
-    position: absolute;
-    left: 250px;
-    top: 5;
-}
-
-.activity[did=hgrs] .hd span:nth-child(3) {
-    float: right;
-}
-
-.activity[did=hgrs] .hd {
-    width: 730px;
-    height: 53px;
-    background-color: #fff;
-    z-index: 1;
-}
-
 .activity[did=hbzs] {
     position: relative;
 }
@@ -1101,7 +1238,7 @@ li {
 }
 
 .activity[did=grs] .hd {
-    width: 370px;
+    width: 100%;
     height: 53px;
     background-color: #fff;
     z-index: 1;
@@ -1276,9 +1413,9 @@ li {
     cursor: pointer;
 }
 
-.activity[did=grs] .tx {
+.activity[did=grs] [pid=main] .tx {
     display: flex;
-    width: 370px;
+    width: 100%;
     height: 200px;
     align-items: center;
     justify-content: center;
@@ -1286,93 +1423,42 @@ li {
     background-color: #333;
 }
 
-.activity[did=grs] .tx img {
+.activity[did=grs] [pid=main] .tx img {
     display: block;
     width: 100px;
     height: 100px;
     border-radius: 100px;
 }
 
-.activity[did=grs] .tx p.grsgxqm {
+.activity[did=grs] [pid=main] .tx p.grsgxqm {
     color: rgb(212, 212, 212);
     font-size: smaller;
     max-width: 250px;
 }
 
-.activity[did=grs] .tx .grsusername {
+.activity[did=grs] [pid=main] .tx .grsusername {
     color: #fff;
     font-size: x-large;
     margin-bottom: 0;
 }
 
-.activity[did=grs] ul {
+.activity[did=grs] [pid=main] ul {
     margin: 0;
     padding: 0;
     margin-top: 10px;
 }
 
-.activity[did=grs] ul li:hover {
+.activity[did=grs] [pid=main] ul li:hover {
     background-color: wheat;
     cursor: pointer;
 }
 
-.activity[did=grs] ul li::after {
+.activity[did=grs] [pid=main] ul li::after {
     content: ">";
     float: right;
 }
 
-.activity[did=grs] ul li {
-    font-size: x-large;
-    padding: 10px;
-    border: grey solid 1px;
-}
-
-.activity[did=hgrs] .tx {
-    display: flex;
-    width: 730px;
-    height: 200px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #333;
-}
-
-.activity[did=hgrs] .tx img {
-    display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-}
-
-.activity[did=hgrs] .tx p.grsgxqm {
-    color: rgb(212, 212, 212);
-    font-size: smaller;
-    max-width: 250px;
-}
-
-.activity[did=hgrs] .tx .grsusername {
-    color: #fff;
-    font-size: x-large;
-    margin-bottom: 0;
-}
-
-.activity[did=hgrs] ul {
-    margin: 0;
-    padding: 0;
-    margin-top: 10px;
-}
-
-.activity[did=hgrs] ul li:hover {
-    background-color: wheat;
-    cursor: pointer;
-}
-
-.activity[did=hgrs] ul li::after {
-    content: ">";
-    float: right;
-}
-
-.activity[did=hgrs] ul li {
+.activity[did=grs] [pid=main] ul li {
     font-size: x-large;
     padding: 10px;
     border: grey solid 1px;
