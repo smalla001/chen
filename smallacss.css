@@ -19,6 +19,7 @@
 body {
     background-color: royalblue;
     height: 600px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .activity {
@@ -192,6 +193,95 @@ body {
 }
 
 [pid=ggtxwl] textarea {
+    width: 100%;
+    height: 300px;
+    border: cyan solid 2px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+[pid=ggyhmpage] h3 {
+    margin: 30px 0;
+}
+
+[pid=ggyhmpage] h4 {
+    position: relative;
+    top: 40px;
+    margin-top: 20px;
+}
+
+[pid=ggyhmpage] div {
+    margin-top: 230px;
+}
+
+[pid=ggyhmpage] div button {
+    width: 100%;
+    font-size: 24px;
+    background: cyan;
+    border: black solid 1px;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+[pid=ggyhmpage] div button:hover {
+    background: #9effff;
+}
+
+[pid=ggyhmpage] h4 input {
+    width: 250px;
+}
+
+[pid=ggmmpage] h3 {
+    margin: 30px 0;
+}
+
+[pid=ggmmpage] input {
+    width: 230px;
+}
+
+[pid=ggmmpage] div {
+    margin-top: 200px;
+}
+
+[pid=ggmmpage] div button {
+    width: 100%;
+    font-size: 24px;
+    background: cyan;
+    border: black solid 1px;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+[pid=ggmmpage] div button:hover {
+    background-color: #a9e2ff;
+}
+
+[pid=gggxqmpage] h3 {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+[pid=gggxqmpage] div button {
+    width: 49%;
+    height: 50px;
+    outline: 0;
+    border: black solid 1px;
+    background: cyan;
+    font-size: 24px;
+}
+
+[pid=gggxqmpage] div {
+    width: 100%;
+    height: 50px;
+    margin-top: 60px;
+}
+
+[pid=gggxqmpage] div button:hover {
+    background: #8cfffd;
+}
+
+[pid=gggxqmpage] textarea {
     width: 100%;
     height: 300px;
     border: cyan solid 2px;
