@@ -72,6 +72,7 @@ if (localStorage.bbh == undefined) {
     localStorage.bbh = "0.74";
     layer.msg("更新成功，版本号：" + localStorage.bbh);
 }
+localStorage.bbh = "1.00"
 $(".myss").text(localStorage.my);
 $(".appatext").text(localStorage.appa);
 $(".saveappatext").click(function() {
@@ -340,18 +341,6 @@ $("[did='bin'] .togr").click(function() {
     $(".grstx").attr("src", localStorage.tx);
     grsflag = 1;
 });
-// $(".ggtx").click(function() {
-//     layer.prompt({
-//         title: "请输入头像路径"
-//     }, function(val, index) {
-//         layer.msg("更改成功");
-//         localStorage.tx = val;
-//         layer.close(index);
-//         $(".grsusername").text(localStorage.username);
-//         $(".grsgxqm").text(localStorage.gxqm);
-//         $(".grstx").attr("src", localStorage.tx);
-//     });
-// });
 $("[did='grs'] .page").hide();
 $("[did='grs'] [pid='main']").show();
 $("[did='grs'] .ggtx").click(function() {
@@ -486,16 +475,8 @@ $(".ggtxwlyes").click(function() {
     layer.msg("更改成功");
 });
 $(".ggyhm").click(function() {
-    layer.prompt({
-        title: "请输入新的用户名"
-    }, function(val, index) {
-        layer.msg("更改成功");
-        localStorage.username = val;
-        layer.close(index);
-        $(".grsusername").text(localStorage.username);
-        $(".grsgxqm").text(localStorage.gxqm);
-        $(".grstx").attr("src", localStorage.tx);
-    });
+    $("[did='grs'] [pid='main']").hide(400);
+    $("[did='grs'] [pid='ggyhmpage']").show(400);
 });
 $(".ggmy").click(function() {
     layer.prompt({
@@ -507,10 +488,28 @@ $(".ggmy").click(function() {
         $(".myss").text(localStorage.my);
     });
 });
+$(".ggyhmyes").click(function() {
+    var news = $(".grsyhmnew").val();
+    if (news == "") {
+        layer.msg("不得为空");
+    } else if (news.length > 15) {
+        layer.msg("不得超过十五个字");
+    } else {
+        localStorage.username = news;
+        $(".grsusername").text(localStorage.username);
+        $("[did='grs'] [pid='main']").show(400);
+        $("[did='grs'] [pid='ggyhmpage']").hide(400);
+        layer.msg("更改成功");
+    }
+});
+$(".ggyhmno").click(function() {
+    $("[did='grs'] [pid='main']").show(400);
+    $("[did='grs'] [pid='ggyhmpage']").hide(400);
+});
 $(".gyour").click(function() {
     layer.open({
         title: "关于我们",
-        content: "<h1>关于小A</h1><p style='text-indent:2em;'>我们是由陈思全做的一个系统，内容完全由他独自一人编写，切勿抄袭，否则后果自负。</p><h1>资源引用</h1><h2>JQuery</h2><p><b>目的：</b>所有代码都是以它为基础编写</p><h2>Bootstrap Icons,Font Awesome</h2><p><b>目的：</b>应用引用图标</p><h2>layer</h2><p><b>目的：</b>系统弹出层</p>"
+        content: "<h1>关于小A</h1><h1>资源引用</h1><h2>JQuery</h2><p><b>目的：</b>所有代码都是以它为基础编写</p><h2>Bootstrap Icons,Font Awesome</h2><p><b>目的：</b>应用引用图标</p><h2>layer</h2><p><b>目的：</b>系统弹出层</p>"
     });
 });
 $(".gxdata").click(function() {
@@ -542,34 +541,44 @@ $(".ggpin").click(function() {
     });
 });
 $(".ggmm").click(function() {
-    layer.prompt({
-        title: "请输入原密码"
-    }, function(val, index) {
-        if (val == localStorage.password) {
-            layer.prompt({
-                title: "请输入新密码"
-            }, function(val, index) {
-                layer.msg("更改成功");
-                localStorage.password = val;
-                layer.close(index);
-            });
-        } else {
-            layer.msg("密码不正确");
-        }
-        layer.close(index);
-    });
+    $("[did='grs'] [pid='main']").hide(400);
+    $("[did='grs'] [pid='ggmmpage']").show(400);
+});
+$(".ggmmyes").click(function() {
+    var ymm = $(".ggmmymm").val();
+    var nmm = $(".ggmmnew").val();
+    var kmm = $(".ggmmknew").val();
+    if (ymm == "" || nmm == "" || kmm == "") {
+        layer.msg("每一项不得为空");
+    } else if (ymm != localStorage.password) {
+        layer.msg("原密码错误");
+    } else if (nmm != kmm) {
+        layer.msg("两次密码不匹配")
+    } else {
+        localStorage.password = nmm;
+        $("[did='grs'] [pid='main']").show(400);
+        $("[did='grs'] [pid='ggmmpage']").hide(400);
+        layer.msg("更改成功");
+    }
+});
+$(".ggmmno").click(function() {
+    $("[did='grs'] [pid='main']").show(400);
+    $("[did='grs'] [pid='ggmmpage']").hide(400);
 });
 $(".gggxqm").click(function() {
-    layer.prompt({
-        title: "请输入你的个性签名"
-    }, function(val, index) {
-        layer.msg("更改成功");
-        localStorage.gxqm = val;
-        layer.close(index);
-        $(".grsusername").text(localStorage.username);
-        $(".grsgxqm").text(localStorage.gxqm);
-        $(".grstx").attr("src", localStorage.tx);
-    });
+    $("[did='grs'] [pid='main']").hide(400);
+    $("[did='grs'] [pid='gggxqmpage']").show(400);
+});
+$(".gggxqmyes").click(function() {
+    localStorage.gxqm = $(".gggxqmnew").val();
+    $(".grsgxqm").text(localStorage.gxqm);
+    $("[did='grs'] [pid='main']").show(400);
+    $("[did='grs'] [pid='gggxqmpage']").hide(400);
+    layer.msg("更改成功");
+});
+$(".gggxqmno").click(function() {
+    $("[did='grs'] [pid='main']").show(400);
+    $("[did='grs'] [pid='gggxqmpage']").hide(400);
 });
 $(".remove").click(function() {
     layer.prompt({
