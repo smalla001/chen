@@ -1255,6 +1255,70 @@ li {
     z-index: 1;
 }
 
+.activity[did=app3] {
+    position: relative;
+}
+
+.activity[did=app3] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=app3] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=app3] .hd span:nth-child(2) {
+    position: absolute;
+    left: 100px;
+    top: 5;
+}
+
+.activity[did=app3] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=app3] .hd {
+    width: 100%;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.activity[did=app4] {
+    position: relative;
+}
+
+.activity[did=app4] .hd span {
+    font-size: 35px;
+}
+
+.activity[did=app4] .hd span:nth-child(1) {
+    position: relative;
+    top: 5;
+    left: 5;
+    cursor: pointer;
+}
+
+.activity[did=app4] .hd span:nth-child(2) {
+    position: absolute;
+    left: 100px;
+    top: 5;
+}
+
+.activity[did=app4] .hd span:nth-child(3) {
+    float: right;
+}
+
+.activity[did=app4] .hd {
+    width: 100%;
+    height: 53px;
+    background-color: #fff;
+    z-index: 1;
+}
+
 .activity[did=app2] {
     background-image: url(https://tse1-mm.cn.bing.net/th/id/R-C.dd1bda8707e23b3a8aa5a88e38a9d72a?rik=mc9b52PwWDJaTg&riu=http%3a%2f%2fsrc.sotu114.com%2fdata%2fattachment%2fforum%2f201909%2f25%2f223725h6uwqenlzqloquwl.item.jpg-ture&ehk=EbN%2brMrQobcNY%2fr1YTVqT%2bzQx1ED7%2fwRrRxu%2bYRWYnc%3d&risl=&pid=ImgRaw&r=0);
     background-size: 100%;
@@ -1467,7 +1531,7 @@ li {
 }
 
 .activity[did=yys] ul li {
-    padding: 20px 37px;
+    padding: 20px 27px;
     float: left;
     cursor: pointer;
 }
@@ -1498,7 +1562,7 @@ li {
 }
 
 .activity[did=hyys] ul li {
-    padding: 20px 36px;
+    padding: 20px 26px;
     float: left;
     cursor: pointer;
 }
