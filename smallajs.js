@@ -19,6 +19,8 @@ $(".app").hide();
 $("[did='wel1']").show(400);
 var app2flag;
 var grsflag;
+var app3flag;
+var app4flag;
 if (localStorage.saves == undefined || localStorage.saves == "1") {
     localStorage.saves = "1";
     localStorage.username = "";
@@ -740,6 +742,22 @@ $("[did='app2'] .hd .tc").click(function() {
         $("[did='hyys']").show(400);
     }
 });
+$("[did='app3'] .hd .tc").click(function() {
+    $("[did='app3'").hide(400);
+    if (app3flag == 1) {
+        $("[did='yys']").show(400);
+    } else {
+        $("[did='hyys']").show(400);
+    }
+});
+$("[did='app4'] .hd .tc").click(function() {
+    $("[did='app4'").hide(400);
+    if (app4flag == 1) {
+        $("[did='yys']").show(400);
+    } else {
+        $("[did='hyys']").show(400);
+    }
+});
 $("#File").change(function(file) {
     $("body").append(file.target.files[0]);
     var url = window.URL.createObjectURL(file.target.files[0]);
@@ -768,6 +786,26 @@ $("[did='yys'] .toapp2").click(function() {
 $("[did='hyys'] .toapp2").click(function() {
     $("[did='app2'").show(400);
     app2flag = 2;
+    $("[did='hyys']").hide(400);
+});
+$("[did='yys'] .toapp3").click(function() {
+    $("[did='app3'").show(400);
+    app3flag = 1;
+    $("[did='yys']").hide(400);
+});
+$("[did='hyys'] .toapp3").click(function() {
+    $("[did='app3'").show(400);
+    app3flag = 2;
+    $("[did='hyys']").hide(400);
+});
+$("[did='yys'] .toapp4").click(function() {
+    $("[did='app4'").show(400);
+    app4flag = 1;
+    $("[did='yys']").hide(400);
+});
+$("[did='hyys'] .toapp4").click(function() {
+    $("[did='app4'").show(400);
+    app4flag = 2;
     $("[did='hyys']").hide(400);
 });
 $("[did='grs'] .hd .tc").click(function() {
