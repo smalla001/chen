@@ -36,6 +36,68 @@ body {
     height: 517px;
 }
 
+.backgymn,
+.backoutshuju {
+    cursor: pointer;
+}
+
+[pid=outshuju] textarea {
+    width: 100%;
+    height: 300px;
+}
+
+[pid=inshuju] button:hover {
+    background-color: #6ce6ff;
+}
+
+[pid=inshuju] button {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+    border: #000 solid 1px;
+    background-color: cyan;
+}
+
+[pid=toremove] button:hover {
+    background-color: #6ce6ff;
+}
+
+[pid=toremove] button {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+    border: #000 solid 1px;
+    background-color: cyan;
+}
+
+[pid=inshuju] textarea {
+    width: 100%;
+    height: 300px;
+}
+
+[pid=seegymn] {
+    overflow-y: scroll;
+}
+
+[pid=seegjse] ul li b {
+    color: red;
+}
+
+[pid=seegjse] ul li {
+    width: 100%;
+    font-size: 24px;
+    border-bottom: #000 solid 1px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+[pid=seegjse] ul li:nth-child(1)::after,
+[pid=seegjse] ul li:nth-child(2)::after,
+[pid=seegjse] ul li:nth-child(3)::after {
+    content: ">";
+    float: right;
+}
+
 [pid=ggtxpage] div button,
 [pid=ggtxpage]>* {
     width: 100%;
@@ -1027,74 +1089,6 @@ li {
     z-index: 1;
 }
 
-.activity[did=hses] {
-    position: relative;
-}
-
-.activity[did=hses]::-webkit-scrollbar {
-    display: none;
-}
-
-.activity[did=hses] .hd span {
-    font-size: 35px;
-}
-
-.activity[did=hses] .hd span:nth-child(1) {
-    position: relative;
-    top: 5;
-    left: 5;
-    cursor: pointer;
-}
-
-.activity[did=hses] .hd span:nth-child(2) {
-    position: absolute;
-    left: 250px;
-    top: 5;
-}
-
-.activity[did=hses] .hd span:nth-child(3) {
-    float: right;
-}
-
-.activity[did=hses] .hd {
-    width: 730px;
-    height: 53px;
-    background-color: #fff;
-    z-index: 1;
-}
-
-.activity[did=hbzs] {
-    position: relative;
-}
-
-.activity[did=hbzs] .hd span {
-    font-size: 35px;
-}
-
-.activity[did=hbzs] .hd span:nth-child(1) {
-    position: relative;
-    top: 5;
-    left: 5;
-    cursor: pointer;
-}
-
-.activity[did=hbzs] .hd span:nth-child(2) {
-    position: absolute;
-    left: 250px;
-    top: 5;
-}
-
-.activity[did=hbzs] .hd span:nth-child(3) {
-    float: right;
-}
-
-.activity[did=hbzs] .hd {
-    width: 730px;
-    height: 53px;
-    background-color: #fff;
-    z-index: 1;
-}
-
 .activity[did=bzs] {
     position: relative;
 }
@@ -1121,7 +1115,7 @@ li {
 }
 
 .activity[did=bzs] .hd {
-    width: 370px;
+    width: 100%;
     height: 53px;
     background-color: #fff;
     z-index: 1;
@@ -1424,7 +1418,7 @@ li {
 }
 
 .activity[did=ses] .hd {
-    width: 370px;
+    width: 100%;
     height: 53px;
     background-color: #fff;
     z-index: 1;
@@ -1511,7 +1505,8 @@ li {
     overflow-x: hidden;
     overflow-y: scroll;
     width: 370px;
-    height: 500px;
+    height: 450px;
+    padding-top: 30px;
 }
 
 .activity[did=yys] ul::-webkit-scrollbar {
@@ -1520,6 +1515,8 @@ li {
 
 .activity[did=yys] ul li p {
     margin: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .activity[did=yys] ul li p:first-child {
@@ -1531,9 +1528,9 @@ li {
 }
 
 .activity[did=yys] ul li {
-    padding: 20px 27px;
     float: left;
     cursor: pointer;
+    width: 33%;
 }
 
 .activity[did=hyys] ul {
@@ -1542,7 +1539,8 @@ li {
     overflow-x: hidden;
     overflow-y: scroll;
     width: 730px;
-    height: 500px;
+    height: 450px;
+    padding-top: 30px;
 }
 
 .activity[did=hyys] ul::-webkit-scrollbar {
@@ -1551,6 +1549,8 @@ li {
 
 .activity[did=hyys] ul li p {
     margin: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .activity[did=hyys] ul li p:first-child {
@@ -1562,9 +1562,9 @@ li {
 }
 
 .activity[did=hyys] ul li {
-    padding: 20px 26px;
     float: left;
     cursor: pointer;
+    width: 16.5%;
 }
 
 .activity[did=grs] [pid=main] .tx {
@@ -1624,40 +1624,144 @@ li {
     margin-top: 10px;
 }
 
-.activity[did=ses] ul li:hover {
-    background-color: wheat;
-    cursor: pointer;
-}
-
-.activity[did=ses] ul li::after {
+.activity[did=ses] [pid=main] ul li:nth-child(2):after,
+.activity[did=ses] [pid=main] ul li:nth-child(4):after,
+.activity[did=ses] [pid=main] ul li:nth-child(5):after {
     content: ">";
+    font-size: 24px;
     float: right;
 }
 
-.activity[did=ses] ul li {
-    font-size: x-large;
-    padding: 10px;
-    border: grey solid 1px;
+.activity[did=ses] [pid=main] ul li:nth-child(2),
+.activity[did=ses] [pid=main] ul li:nth-child(4),
+.activity[did=ses] [pid=main] ul li:nth-child(5) {
+    cursor: pointer;
 }
 
-.activity[did=hses] ul {
+.activity[did=ses] [pid=main] b {
+    color: red;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.activity[did=ses] [pid=main] ul li:first-child div {
+    float: right;
+    width: 61px;
+    background-color: yellow;
+    height: 37px;
+    padding: 0 3px;
+    cursor: pointer;
+}
+
+.activity[did=ses] [pid=main] ul li * {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.activity[did=ses] [pid=main] ul li>p,
+.activity[did=ses] [pid=main] ul li:after {
     margin: 0;
-    padding: 0;
-    margin-top: 10px;
+    line-height: 50px;
 }
 
-.activity[did=hses] ul li:hover {
-    background-color: wheat;
+.activity[did=ses] [pid=main] input {
+    margin-bottom: 10px;
+    width: 90%;
+    float: left;
+}
+
+.activity[did=ses] [pid=main] button {
+    float: left;
+    border: #000 solid 1px;
+    width: 10%;
+    margin: 0;
+}
+
+.activity[did=ses] [pid=main] ul li div {
+    width: 100%;
+    overflow: hidden;
+}
+
+.activity[did=ses] [pid=main] ul li {
+    width: 100%;
+    border-bottom: #000 solid 1px;
+}
+
+.page {
+    margin-bottom: 11px;
+}
+
+[pid=ggbzpage] button:last-child {
+    background: transparent;
+    border: 0;
+    color: blue;
+}
+
+[pid=ggbzpage] button:hover {
+    background-color: #93ddff;
+}
+
+[pid=ggbzpage] button {
+    width: 100%;
+    font-size: 24px;
+    margin: 10px 0;
+    border: #000 solid 1px;
+    background-color: cyan;
     cursor: pointer;
 }
 
-.activity[did=hses] ul li::after {
-    content: ">";
-    float: right;
+[pid=ggbzbd] input {
+    margin-top: 46px;
 }
 
-.activity[did=hses] ul li {
-    font-size: x-large;
-    padding: 10px;
-    border: grey solid 1px;
+[pid=ggbzbd] div button {
+    width: 50%;
+    float: left;
+    margin-top: 202px;
+}
+
+[pid=ggbzbd]>button {
+    position: relative;
+    top: -43px;
+    height: 43px;
+    pointer-events: none;
+}
+
+[pid=ggbzbd] button {
+    border: #000 solid 1px;
+    background: cyan;
+}
+
+[pid=ggbzbd]>p {
+    font-size: 20px;
+}
+
+[pid=ggbzbd]>button,
+[pid=ggbzbd] input,
+[pid=ggbzbd] div {
+    width: 100%;
+    font-size: 24px;
+}
+
+[pid=ggbzwl] {
+    font-size: 20px;
+}
+
+[pid=ggbzwl] div button:hover {
+    background: #87ebff;
+}
+
+[pid=ggbzwl] div button {
+    width: 50%;
+    float: left;
+    border: #000 solid 1px;
+    background-color: cyan;
+    font-size: 24px;
+    margin-top: 80px;
+}
+
+[pid=ggbzwl] textarea {
+    width: 100%;
+    height: 200px;
+    margin-top: 42px;
 }
