@@ -361,17 +361,20 @@ body {
     border: grey solid 20px;
     border-top: cyan solid 20px;
     animation: loadmove 1s infinite linear;
+    -webkit-animation: loadmove 1s infinite linear;
     width: 100px;
     height: 100px;
     border-radius: 100px;
 }
 
-@keyframes loadmove {
+@-webkit-keyframes loadmove {
     to {
         transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     from {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
+        -webkit-transform: rotate(360deg);
     }
 }
 
@@ -397,10 +400,12 @@ body {
 
 .smalla-eyes div:nth-child(1) div {
     animation: zeye 3s infinite linear;
+    -webkit-animation: zeye 3s infinite linear;
 }
 
 .smalla-eyes div:nth-child(2) div {
     animation: zeye 3s infinite linear;
+    -webkit-animation: zeye 3s infinite linear;
 }
 
 .smalla-eyes div div {
@@ -435,12 +440,13 @@ body {
     border-bottom: #000 solid 5px;
     border-left: #000 solid 5px;
     transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
     width: 35px;
     height: 35px;
     margin: 15px auto;
 }
 
-@keyframes zeye {
+@-webkit-keyframes zeye {
     0%,
     95% {
         height: 80px;
@@ -458,7 +464,7 @@ body {
     display: block;
 }
 
-@keyframes zeys {
+@-webkit-keyframes zeys {
     0% {
         margin-left: 18px;
     }
@@ -492,6 +498,7 @@ body {
 .activity[did=wel1] .smalla-more {
     padding-top: 50px;
     transform: scale(1.5);
+    -webkit-transform: scale(1.5);
 }
 
 .activity[did=wel1] {
@@ -541,6 +548,7 @@ body {
     background-color: #000;
     left: 130px;
     transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
 .activity[did=sp] .smalla-more {
@@ -859,6 +867,7 @@ body {
     background-color: #000;
     left: 130px;
     transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
 .activity[did=bin] .smalla-more {
