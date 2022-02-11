@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!--今天解决手机端Title无法显示的问题。-->
 
 <head>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -18,7 +17,6 @@
     <link rel="stylesheet" href="bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <title>小A</title>
-    <!-- 太长了，我把CSS和JS分开 -->
     <link rel="stylesheet" href="smallacss.css">
 </head>
 
@@ -32,7 +30,7 @@
         </div>
         <div class="activity" did="wel1">
 
-            <div class="smalla-more" style="margin: 0 auto;display: none;">
+            <div class="smalla-more" style="margin: 0 auto;">
                 <div class="smalla-eyes">
                     <div>
                         <div></div>
@@ -368,16 +366,120 @@
                 <span>设置</span>
                 <span class="fa fa-gear" style="color: rgb(100, 100, 100);"></span>
             </div>
-            <ul>
-                <li class="ggpin">更改屏幕设置</li>
+            <div class="page" pid="main">
+                <ul>
+                    <!-- <li class="ggpin">更改屏幕设置</li>
                 <li class="ggbz">设置壁纸</li>
                 <li class="ggmy">设置底部名言</li>
                 <li class="gyour">关于我们</li>
                 <li class="gxdata">更新日志</li>
                 <li class="dcr">导出数据</li>
                 <li class="remove" style="background-color: red;color: white;">恢复出厂设置</li>
-                <li class="drc" style="background-color: red;color: white;" title="非开发者不得设置，否则会造成系统出错">导入数据<b>（高级）</b></li>
-            </ul>
+                <li class="drc" style="background-color: red;color: white;" title="非开发者不得设置，否则会造成系统出错">导入数据<b>（高级）</b></li> -->
+                    <li>
+                        <p>屏幕设置<b>(?)</b></p>
+                        <div class="ggpm">
+                            <p>宽</p>
+                            <p>窄</p>
+                        </div>
+                    </li>
+                    <li class="ggbz">
+                        <p>壁纸<b>(?)</b></p>
+                    </li>
+                    <li>
+                        <p>底部名言<b>(?)</b></p>
+                        <div>
+                            <input type="text" class="ggmynew">
+                            <button class="ggmyyes">&gt;</button>
+                        </div>
+                    </li>
+                    <li class="gymn">
+                        <p>关于我们</p>
+                    </li>
+                    <li class="gjse">
+                        <p>高级设置</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="page" pid="ggbzpage">
+                <button class="toggbzbd">使用本地图片</button>
+                <button class="toggbzwl">使用网络图片</button>
+                <button class="toggbzmr">恢复默认</button>
+                <button class="ggbzno">取消</button>
+                <button class="tobzhelp">壁纸相关说明</button>
+            </div>
+            <div class="page" pid="ggbzbd">
+                <p>说明：<br>&nbsp;&nbsp;&nbsp;&nbsp;请尽量选择淡色背景并且<b>竖着</b>的壁纸，因为窄屏宽屏的壁纸都被放大处理了（窄屏400px，宽屏800px）。</p>
+                <input type="file" class="ggbzbdfile" accept="image/*" />
+                <button>上传图片</button>
+                <div>
+                    <button class="ggbzbdyes">更改</button>
+                    <button class="ggbzbdno">取消</button>
+                </div>
+            </div>
+            <div class="page" pid="ggbzwl">
+                <p>说明：<br>&nbsp;&nbsp;&nbsp;&nbsp;请尽量选择淡色背景并且<b>竖着</b>的壁纸，因为窄屏宽屏的壁纸都被放大处理了（窄屏400px，宽屏800px）。</p>
+                <textarea placeholder="请输入网址" class="ggbzwlurl"></textarea>
+                <div>
+                    <button class="ggbzwlyes">更改</button>
+                    <button class="ggbzwlno">取消</button>
+                </div>
+            </div>
+            <div class="page" pid="seegymn">
+                <h1><span class="bi bi-arrow-left backgymn"></span>关于我们</h1>
+                <ul>
+                    <li>
+                        <h3>版本号</h3>
+                        <p>1.3.4</p>
+                    </li>
+                    <li>
+                        <h3>jQuery版本</h3>
+                        <p>3.6.0</p>
+                    </li>
+                    <li>
+                        <h3>bootstrap-icons版本</h3>
+                        <p>1.8.0</p>
+                    </li>
+                    <li>
+                        <h3>bootstarp版本</h3>
+                        <p>5.1.3</p>
+                    </li>
+                    <li>
+                        <h3>Layui</h3>
+                        <p>2.6.8</p>
+                    </li>
+                    <li>
+                        <h3>版权声明</h3>
+                        <h4>代码无任何引用，版权完全归属于编写者（陈思全），引用请说明来源（http://smalla001.github.io/chen/smalla.html），切勿抄袭，否则后果自负！</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="page" pid="seegjse">
+                <ul>
+                    <li class="dlsj">导入数据<b>(?)</b></li>
+                    <li class="dcsj">导出数据<b>(?)</b></li>
+                    <li class="remove">恢复出厂设置<b>(?)</b></li>
+                    <li class="gjseno">&lt;Back</li>
+                </ul>
+            </div>
+            <div class="page" pid="inshuju">
+                <h3>导入数据</h3>
+                <textarea class="inshujunew"></textarea>
+                <div>
+                    <button class="inshujuyes">导入</button>
+                    <button class="inshujuno">取消</button>
+                </div>
+            </div>
+            <div class="page" pid="outshuju">
+                <h3><span class="bi bi-arrow-left backoutshuju"></span>导出数据</h3>
+                <textarea class="youshuju"></textarea>
+                <p>请复制至一个记事本或便签保存</p>
+            </div>
+            <div class="page" pid="toremove">
+                <p>恢复出厂设置就会清除你的所有数据，你确定吗？</p>
+                <button class="removeyes">确定</button>
+                <button class="removeno">算了吧</button>
+            </div>
         </div>
         <div class="activity" did="bzs">
             <div class="hd">
@@ -558,32 +660,6 @@
                 </li>
             </ul>
         </div>
-        <div class="activity" did="hses">
-            <div class="hd">
-                <span class="bi bi-arrow-left tc"></span>
-                <span>设置</span>
-                <span class="fa fa-gear" style="color: rgb(100, 100, 100);"></span>
-            </div>
-            <ul>
-                <li class="ggpin">更改屏幕设置</li>
-                <li class="ggbz">设置壁纸</li>
-                <li class="ggmy">设置底部名言</li>
-                <li class="gyour">关于我们</li>
-                <li class="gxdata">更新日志</li>
-                <li class="dcr">导出数据</li>
-                <li class="remove" style="background-color: red;color: white;">恢复出厂设置</li>
-                <li class="drc" style="background-color: red;color: white;" title="非开发者不得设置，否则会造成系统出错">导入数据<b>（高级）</b></li>
-            </ul>
-        </div>
-        <div class="activity" did="hbzs">
-            <div class="hd">
-                <span class="bi bi-arrow-left tc"></span>
-                <span>帮助</span>
-                <span class="fa fa-question-circle" style="color: rgb(62, 123, 255);"></span>
-            </div>
-            <h2>开发版，暂不提供帮助</h2>
-            <audio src="A Little Story.mp3" controls/>
-        </div>
         <div class="activity" did="hads">
             <div class="hd">
                 <span class="bi bi-arrow-left tc"></span>
@@ -678,7 +754,7 @@
 </body>
 <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js">
 </script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+<!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script> -->
 <script src="https://www.layuicdn.com/layer-v3.5.1/layer.js"></script>
 <script src="smallajs.js"></script>
 
