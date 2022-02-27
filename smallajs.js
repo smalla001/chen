@@ -10,8 +10,6 @@ function starttime() {
         starttime();
     }, 1000);
 }
-
-window.onload = function() {
     starttime();
     var zho = "1e368";
     $("[did='Load']").hide();
@@ -1012,4 +1010,4 @@ window.onload = function() {
         $("[did='hbzs'").hide(400);
         $("[did='hbin']").show(400);
     });
-}
+
